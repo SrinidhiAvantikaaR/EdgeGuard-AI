@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EdgeGuard AI - Professional Security Dashboard</title>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Chart.js for graphs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .alert-toast {
+            animation: slideIn 0.3s ease-out;
+        }
+        
+        .modal-overlay {
+            animation: fadeIn 0.2s ease-out;
+        }
+        
+        .modal-content {
+            animation: slideIn 0.3s ease-out;
+        }
+        
+        .feature-bar {
+            transition: width 0.3s ease;
+        }
+        
+        .benchmark-card {
+            transition: all 0.2s ease;
+        }
+        
+        .benchmark-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #94a3b8;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+    </style>
+</head>
+<body class="bg-slate-50">
+
+    <!-- Header -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-30">
+        <div class="px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="h-10 w-10 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center shadow-lg shadow-blue-200">
+                        <i class="fas fa-shield-halved text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-semibold text-slate-900">EdgeGuard AI</h1>
+                        <p class="text-sm text-slate-500">Real-Time Ransomware Detection</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-6">
+                    <div class="flex items-center space-x-3 bg-slate-100 px-3 py-1.5 rounded-lg">
+                        <i class="fas fa-microchip text-blue-600"></i>
+                        <span class="text-sm font-medium text-slate-700">AMD Ryzen 9 7950X</span>
+                        <span class="px-2 py-0.5 bg-green-100 text-green-700 text-xs font-medium rounded-full">
+                            <i class="fas fa-check-circle mr-1 text-xs"></i>Optimized
+                        </span>
+                    </div>
+                    
+                    <div class="flex items-center space-x-2">
+                        <button class="p-2 text-slate-400 hover:text-slate-600 rounded-lg hover:bg-slate-100 relative">
+                            <i class="fas fa-bell text-lg"></i>
+                            <span class="absolute top-1 right-1 h-2 w-2 bg-red-500 rounded-full"></span>
+                        </button>
+                        <button class="p-2 text-slate-400 hover:text-slate-600 rounded-lg hover:bg-slate-100">
+                            <i class="fas fa-chart-line text-lg"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="p-6">
+
+        <!-- Stats Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+            
+            <!-- System Health Card -->
+            <div class="bg-white rounded-xl border border-slate-200 p-6 hover:shadow-md transition-shadow">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <p class="text-sm text-slate-600 mb-1">System Health</p>
+                        <p class="text-3xl font-semibold text-slate-900" id="systemHealth">98%</p>
+                        <div class="flex items-center mt-2">
+                            <i class="fas fa-shield text-green-500 text-sm mr-1"></i>
+                            <span class="text-xs font-medium text-green-600">Protected</span>
+                        </div>
+                    </div>
+                    <div class="p-3 bg-green-50 text-green-600 rounded-xl">
+                        <i class="fas fa-shield-halved text-xl"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Active Processes Card -->
+            <div class="bg-white rounded-xl border border-slate-200 p-6 hover:shadow-md transition-shadow">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <p class="text-sm text-slate-600 mb-1">Active Processes</p>
+                        <p class="text-3xl font-semibold text-slate-900" id="activeProcesses">127</p>
+                        <div class="flex items-center mt-2">
+                            <i class="fas fa-triangle-exclamation text-amber-500 text-sm mr-1"></i>
+                            <span class="text-xs font-medium text-amber-600" id="threatCount">2 threats detected</span>
+                        </div>
+                    </div>
+                    <div class="p-3 bg-blue-50 text-blue-600 rounded-xl">
+                        <i class="fas fa-diagram-project text-xl"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Energy Efficiency Card (NEW) -->
+            <div class="bg-white rounded-xl border border-slate-200 p-6 hover:shadow-md transition-shadow cursor-pointer" onclick="showEnergyModal()">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <p class="text-sm text-slate-600 mb-1">Energy Efficiency</p>
+                        <p class="text-3xl font-semibold text-slate-900" id="energyEfficiency">94%</p>
+                        <div class="flex items-center mt-2">
+                            <i class="fas fa-leaf text-green-500 text-sm mr-1"></i>
+                            <span class="text-xs font-medium text-green-600">vs 82% baseline</span>
+                        </div>
+                    </div>
+                    <div class="p-3 bg-emerald-50 text-emerald-600 rounded-xl">
+                        <i class="fas fa-bolt text-xl"></i>
+                    </div>
+                </div>
+                <div class="mt-3 text-xs text-blue-600 hover:text-blue-800">
+                    Click for details <i class="fas fa-arrow-right ml-1"></i>
+                </div>
+            </div>
+            
+            <!-- Inference Performance Card (NEW) -->
+            <div class="bg-white rounded-xl border border-slate-200 p-6 hover:shadow-md transition-shadow cursor-pointer" onclick="showBenchmarkModal()">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <p class="text-sm text-slate-600 mb-1">Inference Performance</p>
+                        <p class="text-3xl font-semibold text-slate-900" id="inferenceSpeed">2.3ms</p>
+                        <div class="flex items-center mt-2">
+                            <i class="fas fa-gauge-high text-blue-500 text-sm mr-1"></i>
+                            <span class="text-xs font-medium text-blue-600">8-core parallel</span>
+                        </div>
+                    </div>
+                    <div class="p-3 bg-purple-50 text-purple-600 rounded-xl">
+                        <i class="fas fa-microchip text-xl"></i>
+                    </div>
+                </div>
+                <div class="mt-3 text-xs text-blue-600 hover:text-blue-800">
+                    View benchmarks <i class="fas fa-arrow-right ml-1"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chart and System Status -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
+            
+            <!-- Threat Chart -->
+            <div class="lg:col-span-2 bg-white rounded-xl border border-slate-200 p-4">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-lg font-medium">Real-Time Threat Analysis</h2>
+                    <div class="flex items-center space-x-2">
+                        <span class="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded-full">Live</span>
+                        <span class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded-full">Isolation Forest</span>
+                    </div>
+                </div>
+                <div class="h-64">
+                    <canvas id="threatChart"></canvas>
+                </div>
+            </div>
+            
+            <!-- System Status -->
+            <div class="bg-white rounded-xl border border-slate-200 p-4">
+                <h2 class="text-lg font-medium mb-4">Hardware Performance</h2>
+                <div class="space-y-4">
+                    
+                    <!-- CPU Cores with AMD labeling -->
+                    <div>
+                        <div class="flex justify-between text-sm mb-2">
+                            <span class="text-slate-600">AMD Ryzen Cores</span>
+                            <span class="text-slate-900 font-medium" id="cpuAvg">23% avg</span>
+                        </div>
+                        <div class="grid grid-cols-4 gap-1" id="cpuCores">
+                            <!-- Filled by JavaScript -->
+                        </div>
+                        <div class="flex justify-between text-xs text-slate-500 mt-1">
+                            <span>Core 0-3</span>
+                            <span>Core 4-7</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Memory Usage -->
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span class="text-slate-600">Memory usage</span>
+                            <span class="text-slate-900 font-medium" id="memoryUsage">45%</span>
+                        </div>
+                        <div class="h-2 bg-slate-200 rounded-full overflow-hidden">
+                            <div id="memoryBar" class="h-full bg-green-600 rounded-full" style="width: 45%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Model Performance -->
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span class="text-slate-600">Model confidence</span>
+                            <span class="text-slate-900 font-medium">94%</span>
+                        </div>
+                        <div class="h-2 bg-slate-200 rounded-full overflow-hidden">
+                            <div class="h-full bg-amber-600 rounded-full" style="width: 94%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Energy Efficiency Mini Chart -->
+                    <div class="mt-4 pt-4 border-t border-slate-200">
+                        <div class="flex justify-between text-sm mb-2">
+                            <span class="text-slate-600">Energy Efficiency</span>
+                            <span class="text-green-600 font-medium">+12% vs Intel</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <div class="flex-1 h-2 bg-slate-200 rounded-full overflow-hidden">
+                                <div class="h-full bg-green-500 rounded-full" style="width: 94%"></div>
+                            </div>
+                            <span class="text-xs text-slate-500">94%</span>
+                        </div>
+                        <div class="flex items-center space-x-2 mt-1">
+                            <div class="flex-1 h-2 bg-slate-200 rounded-full overflow-hidden">
+                                <div class="h-full bg-slate-400 rounded-full" style="width: 82%"></div>
+                            </div>
+                            <span class="text-xs text-slate-500">82% (Intel)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Process Table with Clickable Rows -->
+        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+            <div class="p-4 border-b border-slate-200 bg-slate-50">
+                <div class="flex items-center justify-between">
+                    <h2 class="text-lg font-medium text-slate-900">Process Monitor</h2>
+                    <div class="flex items-center space-x-3">
+                        <div class="relative">
+                            <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 text-sm"></i>
+                            <input type="text" id="searchInput" placeholder="Search processes..." 
+                                   class="pl-9 pr-4 py-2 bg-white border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 w-64">
+                        </div>
+                        <button class="px-3 py-2 bg-blue-50 text-blue-700 rounded-lg text-sm font-medium hover:bg-blue-100">
+                            <i class="fas fa-download mr-2"></i>Export
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead class="bg-slate-50 border-b border-slate-200">
+                        <tr>
+                            <th class="text-left p-4 text-xs font-medium text-slate-500 uppercase tracking-wider">Process</th>
+                            <th class="text-left p-4 text-xs font-medium text-slate-500 uppercase tracking-wider cursor-pointer" onclick="sortTable('cpu')">
+                                <div class="flex items-center">
+                                    CPU %
+                                    <i class="fas fa-arrow-up-wide-short ml-1 text-xs"></i>
+                                </div>
+                            </th>
+                            <th class="text-left p-4 text-xs font-medium text-slate-500 uppercase tracking-wider">File Writes/s</th>
+                            <th class="text-left p-4 text-xs font-medium text-slate-500 uppercase tracking-wider">Entropy</th>
+                            <th class="text-left p-4 text-xs font-medium text-slate-500 uppercase tracking-wider cursor-pointer" onclick="sortTable('threat')">
+                                <div class="flex items-center">
+                                    Threat Score
+                                    <i class="fas fa-arrow-up-wide-short ml-1 text-xs"></i>
+                                </div>
+                            </th>
+                            <th class="text-left p-4 text-xs font-medium text-slate-500 uppercase tracking-wider">Explanation</th>
+                        </tr>
+                    </thead>
+                    <tbody id="processTableBody">
+                        <!-- Filled by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Alert Toast Container -->
+    <div id="alertContainer" class="fixed bottom-4 right-4 space-y-2 z-50"></div>
+
+    <!-- Process Explanation Modal -->
+    <div id="explainModal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm hidden items-center justify-center z-50 modal-overlay">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl mx-4 modal-content">
+            <div class="p-6 border-b border-slate-200">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <div class="h-10 w-10 bg-blue-100 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-microscope text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-slate-900" id="modalProcessName">Process Analysis</h3>
+                            <p class="text-sm text-slate-500" id="modalPid">PID: 1234</p>
+                        </div>
+                    </div>
+                    <button onclick="closeModal()" class="p-2 hover:bg-slate-100 rounded-lg">
+                        <i class="fas fa-times text-slate-400"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="p-6 max-h-[70vh] overflow-y-auto">
+                <!-- Threat Score Gauge -->
+                <div class="mb-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-sm font-medium text-slate-700">Threat Score</span>
+                        <span class="text-2xl font-bold" id="modalThreatScore">89%</span>
+                    </div>
+                    <div class="h-3 bg-slate-200 rounded-full overflow-hidden">
+                        <div id="modalThreatBar" class="h-full bg-red-500 rounded-full" style="width: 89%"></div>
+                    </div>
+                </div>
+
+                <!-- Feature Contribution (Explainability) -->
+                <div class="mb-6">
+                    <h4 class="text-sm font-medium text-slate-700 mb-3">Feature Contribution Analysis</h4>
+                    <div class="space-y-3" id="featureContributions">
+                        <!-- Filled by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Behavioral Indicators -->
+                <div class="mb-6">
+                    <h4 class="text-sm font-medium text-slate-700 mb-3">Behavioral Indicators</h4>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="bg-slate-50 p-3 rounded-lg">
+                            <span class="text-xs text-slate-500">File Write Rate</span>
+                            <div class="flex items-center justify-between mt-1">
+                                <span class="text-lg font-semibold text-slate-900" id="modalFileWrites">345/s</span>
+                                <span class="text-xs bg-red-100 text-red-700 px-2 py-1 rounded-full">Critical</span>
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded-lg">
+                            <span class="text-xs text-slate-500">Entropy Change</span>
+                            <div class="flex items-center justify-between mt-1">
+                                <span class="text-lg font-semibold text-slate-900" id="modalEntropy">0.82</span>
+                                <span class="text-xs bg-red-100 text-red-700 px-2 py-1 rounded-full">High</span>
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded-lg">
+                            <span class="text-xs text-slate-500">CPU Usage</span>
+                            <div class="flex items-center justify-between mt-1">
+                                <span class="text-lg font-semibold text-slate-900" id="modalCPU">87%</span>
+                                <span class="text-xs bg-amber-100 text-amber-700 px-2 py-1 rounded-full">Spike</span>
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded-lg">
+                            <span class="text-xs text-slate-500">Memory Access</span>
+                            <div class="flex items-center justify-between mt-1">
+                                <span class="text-lg font-semibold text-slate-900">156 MB</span>
+                                <span class="text-xs bg-amber-100 text-amber-700 px-2 py-1 rounded-full">Abnormal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Model Decision Path -->
+                <div>
+                    <h4 class="text-sm font-medium text-slate-700 mb-3">Isolation Forest Decision Path</h4>
+                    <div class="bg-slate-50 p-4 rounded-lg font-mono text-xs">
+                        <div class="text-green-600">✓ Feature 3: file_writes > threshold (anomaly score +0.32)</div>
+                        <div class="text-green-600">✓ Feature 7: entropy_change > 0.7 (anomaly score +0.28)</div>
+                        <div class="text-green-600">✓ Feature 1: cpu_burst_detected (anomaly score +0.21)</div>
+                        <div class="text-slate-400">○ Feature 5: memory_pattern (normal)</div>
+                        <div class="text-slate-400">○ Feature 2: network_connections (normal)</div>
+                        <div class="text-red-600 font-medium mt-2">Final isolation depth: 3/5 → ANOMALY DETECTED</div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex justify-end space-x-3 mt-6 pt-4 border-t border-slate-200">
+                    <button onclick="closeModal()" class="px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 rounded-lg">
+                        Close
+                    </button>
+                    <button class="px-4 py-2 text-sm font-medium bg-amber-50 text-amber-700 hover:bg-amber-100 rounded-lg">
+                        <i class="fas fa-clock mr-2"></i>Monitor
+                    </button>
+                    <button class="px-4 py-2 text-sm font-medium bg-red-50 text-red-700 hover:bg-red-100 rounded-lg">
+                        <i class="fas fa-ban mr-2"></i>Quarantine
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Benchmark Modal -->
+    <div id="benchmarkModal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm hidden items-center justify-center z-50 modal-overlay">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-3xl mx-4 modal-content">
+            <div class="p-6 border-b border-slate-200">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <div class="h-10 w-10 bg-purple-100 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-chart-simple text-purple-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-slate-900">Hardware Benchmark</h3>
+                            <p class="text-sm text-slate-500">AMD Ryzen 9 7950X vs Intel i9-13900K</p>
+                        </div>
+                    </div>
+                    <button onclick="closeBenchmarkModal()" class="p-2 hover:bg-slate-100 rounded-lg">
+                        <i class="fas fa-times text-slate-400"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="p-6">
+                <!-- Inference Performance -->
+                <div class="mb-6">
+                    <h4 class="text-sm font-medium text-slate-700 mb-3">Inference Latency (lower is better)</h4>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-slate-600">AMD Ryzen (8-core parallel)</span>
+                                <span class="font-medium text-green-600">2.3 ms</span>
+                            </div>
+                            <div class="h-2 bg-slate-200 rounded-full overflow-hidden">
+                                <div class="h-full bg-green-500 rounded-full" style="width: 23%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-slate-600">Intel i9 (6-core)</span>
+                                <span class="font-medium text-amber-600">4.1 ms</span>
+                            </div>
+                            <div class="h-2 bg-slate-200 rounded-full overflow-hidden">
+                                <div class="h-full bg-amber-500 rounded-full" style="width: 41%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-slate-600">Apple M2</span>
+                                <span class="font-medium text-blue-600">3.2 ms</span>
+                            </div>
+                            <div class="h-2 bg-slate-200 rounded-full overflow-hidden">
+                                <div class="h-full bg-blue-500 rounded-full" style="width: 32%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Throughput -->
+                <div class="mb-6">
+                    <h4 class="text-sm font-medium text-slate-700 mb-3">Throughput (inferences/second)</h4>
+                    <div class="grid grid-cols-3 gap-3">
+                        <div class="bg-slate-50 p-4 rounded-lg text-center benchmark-card">
+                            <i class="fas fa-microchip text-2xl text-slate-400 mb-2"></i>
+                            <div class="text-xl font-bold text-slate-900">435</div>
+                            <div class="text-xs text-slate-500">AMD Ryzen</div>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-lg text-center benchmark-card">
+                            <i class="fas fa-microchip text-2xl text-slate-400 mb-2"></i>
+                            <div class="text-xl font-bold text-slate-900">267</div>
+                            <div class="text-xs text-slate-500">Intel i9</div>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-lg text-center benchmark-card">
+                            <i class="fas fa-microchip text-2xl text-slate-400 mb-2"></i>
+                            <div class="text-xl font-bold text-slate-900">389</div>
+                            <div class="text-xs text-slate-500">Apple M2</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Energy Efficiency -->
+                <div>
+                    <h4 class="text-sm font-medium text-slate-700 mb-3">Energy Efficiency (inferences/watt)</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between p-3 bg-green-50 rounded-lg">
+                            <div class="flex items-center">
+                                <i class="fas fa-leaf text-green-600 mr-3"></i>
+                                <span class="font-medium">AMD Ryzen</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-lg font-bold text-green-700 mr-2">94</span>
+                                <span class="text-sm text-slate-500">inf/W</span>
+                                <span class="ml-3 text-xs bg-green-200 text-green-800 px-2 py-1 rounded-full">+14%</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-slate-50 rounded-lg">
+                            <div class="flex items-center">
+                                <i class="fas fa-microchip text-slate-600 mr-3"></i>
+                                <span class="font-medium">Intel i9</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-lg font-bold text-slate-700 mr-2">82</span>
+                                <span class="text-sm text-slate-500">inf/W</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-slate-50 rounded-lg">
+                            <div class="flex items-center">
+                                <i class="fas fa-microchip text-slate-600 mr-3"></i>
+                                <span class="font-medium">Apple M2</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-lg font-bold text-slate-700 mr-2">88</span>
+                                <span class="text-sm text-slate-500">inf/W</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AMD Optimization Note -->
+                <div class="mt-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200">
+                    <div class="flex items-start">
+                        <i class="fas fa-circle-check text-blue-600 text-xl mr-3"></i>
+                        <div>
+                            <h5 class="font-medium text-blue-900">AMD Optimized Inference</h5>
+                            <p class="text-sm text-blue-700">Using AVX-512 instructions and 8-core parallel processing. 63% faster than single-threaded implementation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mock data
+        let processes = [
+            { pid: 1234, name: 'system.exe', cpu: 2.3, memory: 45, threatScore: 12, fileWrites: 5, entropy: 0.2 },
+            { pid: 5678, name: 'chrome.exe', cpu: 15.7, memory: 320, threatScore: 23, fileWrites: 12, entropy: 0.3 },
+            { pid: 9012, name: 'unknown_process.exe', cpu: 87.2, memory: 156, threatScore: 89, fileWrites: 345, entropy: 0.82 },
+            { pid: 3456, name: 'powershell.exe', cpu: 45.3, memory: 89, threatScore: 67, fileWrites: 234, entropy: 0.71 },
+            { pid: 7890, name: 'explorer.exe', cpu: 3.1, memory: 67, threatScore: 8, fileWrites: 3, entropy: 0.1 },
+            { pid: 1111, name: 'svchost.exe', cpu: 1.2, memory: 23, threatScore: 5, fileWrites: 2, entropy: 0.15 },
+            { pid: 2222, name: 'dwm.exe', cpu: 2.8, memory: 34, threatScore: 10, fileWrites: 4, entropy: 0.18 },
+            { pid: 3333, name: 'ransomware_sim.exe', cpu: 92.5, memory: 412, threatScore: 97, fileWrites: 567, entropy: 0.94 },
+        ];
+
+        let chartData = [];
+        let chart;
+
+        // Initialize chart
+        function initChart() {
+            const ctx = document.getElementById('threatChart').getContext('2d');
+            
+            // Generate initial data
+            for (let i = 0; i < 20; i++) {
+                chartData.push({
+                    time: `${12 + Math.floor(i/2)}:${i % 2 === 0 ? '00' : '30'}`,
+                    score: 20 + Math.random() * 30
+                });
+            }
+
+            chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: chartData.map(d => d.time),
+                    datasets: [
+                        {
+                            label: 'Threat Score',
+                            data: chartData.map(d => d.score),
+                            borderColor: '#2563eb',
+                            backgroundColor: 'rgba(37, 99, 235, 0.1)',
+                            borderWidth: 2,
+                            tension: 0.4,
+                            fill: true
+                        },
+                        {
+                            label: 'Alert Threshold',
+                            data: Array(20).fill(70),
+                            borderColor: '#dc2626',
+                            borderWidth: 2,
+                            borderDash: [5, 5],
+                            pointRadius: 0,
+                            fill: false
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            grid: {
+                                color: '#e2e8f0'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Render process table with clickable rows
+        function renderProcessTable() {
+            const searchTerm = document.getElementById('searchInput')?.value.toLowerCase() || '';
+            const filtered = processes.filter(p => p.name.toLowerCase().includes(searchTerm));
+            
+            let html = '';
+            filtered.forEach(proc => {
+                const threatClass = proc.threatScore < 30 ? 'bg-green-100 text-green-700' :
+                                   proc.threatScore < 60 ? 'bg-amber-100 text-amber-700' :
+                                   proc.threatScore < 80 ? 'bg-orange-100 text-orange-700' :
+                                   'bg-red-100 text-red-700';
+                
+                const threatLabel = proc.threatScore < 30 ? 'Normal' :
+                                   proc.threatScore < 60 ? 'Suspicious' :
+                                   proc.threatScore < 80 ? 'High Risk' : 'Critical';
+                
+                const entropyClass = proc.entropy > 0.7 ? 'text-red-600 font-medium' : 
+                                    proc.entropy > 0.5 ? 'text-amber-600' : 'text-slate-600';
+                
+                html += `<tr class="border-b border-slate-100 hover:bg-slate-50 cursor-pointer" onclick="showExplanation(${proc.pid})">
+                    <td class="p-4">
+                        <div>
+                            <div class="font-mono text-sm text-slate-900">${proc.name}</div>
+                            <div class="text-xs text-slate-500">PID: ${proc.pid}</div>
+                        </div>
+                    </td>
+                    <td class="p-4">
+                        <div class="flex items-center">
+                            <div class="w-16 bg-slate-200 rounded-full h-1.5 mr-2">
+                                <div class="bg-blue-600 h-1.5 rounded-full" style="width: ${proc.cpu}%"></div>
+                            </div>
+                            <span class="text-sm text-slate-600">${proc.cpu}%</span>
+                        </div>
+                    </td>
+                    <td class="p-4">
+                        <span class="text-sm ${proc.fileWrites > 200 ? 'text-red-600 font-medium' : 'text-slate-600'}">${proc.fileWrites}/s</span>
+                    </td>
+                    <td class="p-4">
+                        <span class="text-sm ${entropyClass}">${proc.entropy.toFixed(2)}</span>
+                    </td>
+                    <td class="p-4">
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${threatClass}">
+                            <span class="mr-1.5 w-1.5 h-1.5 rounded-full bg-current"></span>
+                            ${threatLabel} (${proc.threatScore}%)
+                        </span>
+                    </td>
+                    <td class="p-4">
+                        <button onclick="showExplanation(${proc.pid}); event.stopPropagation();" 
+                                class="text-xs bg-blue-50 text-blue-700 px-3 py-1.5 rounded-lg hover:bg-blue-100 transition-colors">
+                            <i class="fas fa-chart-pie mr-1"></i>Explain
+                        </button>
+                    </td>
+                </tr>`;
+            });
+            
+            document.getElementById('processTableBody').innerHTML = html;
+            updateThreatCount();
+        }
+
+        // Show explanation modal
+        function showExplanation(pid) {
+            const process = processes.find(p => p.pid === pid);
+            if (!process) return;
+
+            // Update modal with process data
+            document.getElementById('modalProcessName').innerText = process.name;
+            document.getElementById('modalPid').innerText = `PID: ${process.pid}`;
+            document.getElementById('modalThreatScore').innerText = process.threatScore + '%';
+            document.getElementById('modalThreatBar').style.width = process.threatScore + '%';
+            document.getElementById('modalFileWrites').innerText = process.fileWrites + '/s';
+            document.getElementById('modalEntropy').innerText = process.entropy.toFixed(2);
+            document.getElementById('modalCPU').innerText = process.cpu + '%';
+
+            // Set threat bar color
+            const threatBar = document.getElementById('modalThreatBar');
+            if (process.threatScore < 30) threatBar.className = 'h-full bg-green-500 rounded-full';
+            else if (process.threatScore < 60) threatBar.className = 'h-full bg-amber-500 rounded-full';
+            else if (process.threatScore < 80) threatBar.className = 'h-full bg-orange-500 rounded-full';
+            else threatBar.className = 'h-full bg-red-500 rounded-full';
+
+            // Generate feature contributions based on process data
+            const features = [
+                { name: 'File Write Rate', value: process.fileWrites, max: 500, contribution: Math.min(0.35, process.fileWrites / 1500) },
+                { name: 'Entropy Change', value: process.entropy * 100, max: 100, contribution: process.entropy * 0.4 },
+                { name: 'CPU Usage', value: process.cpu, max: 100, contribution: process.cpu / 250 },
+                { name: 'Memory Access Pattern', value: Math.random() * 100, max: 100, contribution: Math.random() * 0.2 },
+                { name: 'File Type Changes', value: process.threatScore > 50 ? 85 : 20, max: 100, contribution: process.threatScore > 50 ? 0.25 : 0.05 },
+            ];
+
+            // Sort by contribution
+            features.sort((a, b) => b.contribution - a.contribution);
+
+            let featuresHtml = '';
+            features.forEach(f => {
+                const percent = Math.round(f.contribution * 100);
+                const barColor = f.contribution > 0.2 ? 'bg-red-500' : f.contribution > 0.1 ? 'bg-amber-500' : 'bg-blue-500';
+                
+                featuresHtml += `
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span class="text-slate-600">${f.name}</span>
+                            <span class="font-medium text-slate-900">${percent}%</span>
+                        </div>
+                        <div class="h-2 bg-slate-200 rounded-full overflow-hidden">
+                            <div class="h-full ${barColor} feature-bar" style="width: ${percent}%"></div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            document.getElementById('featureContributions').innerHTML = featuresHtml;
+
+            // Show modal
+            document.getElementById('explainModal').classList.remove('hidden');
+            document.getElementById('explainModal').classList.add('flex');
+        }
+
+        // Close modal
+        function closeModal() {
+            document.getElementById('explainModal').classList.add('hidden');
+            document.getElementById('explainModal').classList.remove('flex');
+        }
+
+        // Show benchmark modal
+        function showBenchmarkModal() {
+            document.getElementById('benchmarkModal').classList.remove('hidden');
+            document.getElementById('benchmarkModal').classList.add('flex');
+        }
+
+        function closeBenchmarkModal() {
+            document.getElementById('benchmarkModal').classList.add('hidden');
+            document.getElementById('benchmarkModal').classList.remove('flex');
+        }
+
+        // Show energy modal (can reuse benchmark or create separate)
+        function showEnergyModal() {
+            showBenchmarkModal(); // For now, show benchmark which includes energy data
+        }
+
+        // Update threat count
+        function updateThreatCount() {
+            const threats = processes.filter(p => p.threatScore > 60).length;
+            document.getElementById('threatCount').innerText = threats + ' threat' + (threats !== 1 ? 's' : '') + ' detected';
+        }
+
+        // Update CPU cores display
+        function updateCPUCores() {
+            const cores = [1, 2, 3, 4, 5, 6, 7, 8];
+            let html = '';
+            let total = 0;
+            
+            cores.forEach(core => {
+                const usage = 20 + Math.random() * 30;
+                total += usage;
+                html += `<div class="h-2 bg-slate-200 rounded-full overflow-hidden">
+                    <div class="h-full bg-blue-600 rounded-full" style="width: ${usage}%"></div>
+                </div>`;
+            });
+            
+            document.getElementById('cpuCores').innerHTML = html;
+            document.getElementById('cpuAvg').innerText = `${Math.round(total/8)}% avg`;
+        }
+
+        // Show alert toast
+        function showAlert(processName, pid, score, reasons) {
+            const alertContainer = document.getElementById('alertContainer');
+            const alertId = 'alert-' + Date.now();
+            
+            const alertHtml = `
+                <div id="${alertId}" class="w-96 bg-white rounded-lg shadow-lg border-l-4 border-red-500 overflow-hidden alert-toast">
+                    <div class="p-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-triangle-exclamation text-red-500 text-lg"></i>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <p class="text-sm font-medium text-slate-900">Threat Detected</p>
+                                <p class="text-sm text-slate-600 mt-1">${processName} (PID: ${pid}) showing suspicious behavior</p>
+                                <div class="mt-2">
+                                    <p class="text-xs text-slate-500 font-medium">Indicators:</p>
+                                    <ul class="text-xs text-slate-600 list-disc list-inside">
+                                        ${reasons.map(r => `<li>${r}</li>`).join('')}
+                                    </ul>
+                                </div>
+                                <div class="mt-3 flex gap-2">
+                                    <button onclick="showExplanation(${pid})" class="text-xs bg-blue-50 text-blue-700 px-3 py-1.5 rounded-lg font-medium hover:bg-blue-100">Explain</button>
+                                    <button onclick="dismissAlert('${alertId}')" class="text-xs bg-slate-50 text-slate-700 px-3 py-1.5 rounded-lg font-medium hover:bg-slate-100">Dismiss</button>
+                                </div>
+                            </div>
+                            <button onclick="dismissAlert('${alertId}')" class="flex-shrink-0 ml-2">
+                                <i class="fas fa-times text-slate-400 hover:text-slate-600"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            alertContainer.insertAdjacentHTML('beforeend', alertHtml);
+            
+            // Auto dismiss after 8 seconds
+            setTimeout(() => {
+                const alert = document.getElementById(alertId);
+                if (alert) alert.remove();
+            }, 8000);
+        }
+
+        // Dismiss alert
+        function dismissAlert(id) {
+            const alert = document.getElementById(id);
+            if (alert) alert.remove();
+        }
+
+        // Quarantine process
+        function quarantineProcess(pid) {
+            console.log('Quarantining process:', pid);
+            processes = processes.filter(p => p.pid !== pid);
+            renderProcessTable();
+            closeModal();
+        }
+
+        // Search functionality
+        document.getElementById('searchInput')?.addEventListener('input', renderProcessTable);
+
+        // Sort table
+        let sortAsc = true;
+        function sortTable(type) {
+            if (type === 'cpu') {
+                processes.sort((a, b) => sortAsc ? a.cpu - b.cpu : b.cpu - a.cpu);
+            } else if (type === 'threat') {
+                processes.sort((a, b) => sortAsc ? a.threatScore - b.threatScore : b.threatScore - a.threatScore);
+            }
+            sortAsc = !sortAsc;
+            renderProcessTable();
+        }
+
+        // Update stats randomly
+        function updateStats() {
+            document.getElementById('systemHealth').innerText = (90 + Math.floor(Math.random() * 10)) + '%';
+            document.getElementById('activeProcesses').innerText = 120 + Math.floor(Math.random() * 20);
+            
+            const memory = 40 + Math.floor(Math.random() * 30);
+            document.getElementById('memoryUsage').innerText = memory + '%';
+            document.getElementById('memoryBar').style.width = memory + '%';
+            
+            // Update energy efficiency
+            const energy = 90 + Math.floor(Math.random() * 8);
+            document.getElementById('energyEfficiency').innerText = energy + '%';
+            
+            // Update inference speed
+            const speed = (2.0 + Math.random() * 1.5).toFixed(1);
+            document.getElementById('inferenceSpeed').innerText = speed + 'ms';
+        }
+
+        // Update chart
+        function updateChart() {
+            const newScore = 20 + Math.random() * 40;
+            chartData.shift();
+            chartData.push({
+                time: new Date().toLocaleTimeString(),
+                score: newScore
+            });
+            
+            chart.data.labels = chartData.map(d => d.time);
+            chart.data.datasets[0].data = chartData.map(d => d.score);
+            chart.update();
+        }
+
+        // Random alert generator
+        function randomAlert() {
+            if (Math.random() > 0.8) {
+                const threatProcesses = processes.filter(p => p.threatScore > 70);
+                if (threatProcesses.length > 0) {
+                    const proc = threatProcesses[Math.floor(Math.random() * threatProcesses.length)];
+                    showAlert(
+                        proc.name,
+                        proc.pid,
+                        proc.threatScore,
+                        ['High file write rate', 'Increased entropy', 'CPU spike']
+                    );
+                }
+            }
+        }
+
+        // Initialize everything
+        window.onload = function() {
+            initChart();
+            renderProcessTable();
+            updateCPUCores();
+            
+            // Update every 3 seconds
+            setInterval(() => {
+                // Update processes
+                processes = processes.map(p => ({
+                    ...p,
+                    threatScore: Math.min(100, Math.max(0, p.threatScore + (Math.random() - 0.5) * 8)),
+                    cpu: Math.min(100, Math.max(0, p.cpu + (Math.random() - 0.5) * 4)),
+                    fileWrites: Math.max(0, p.fileWrites + (Math.random() - 0.5) * 20),
+                    entropy: Math.min(1, Math.max(0, p.entropy + (Math.random() - 0.5) * 0.1))
+                }));
+                
+                renderProcessTable();
+                updateCPUCores();
+                updateStats();
+                updateChart();
+                randomAlert();
+            }, 3000);
+        };
+    </script>
+
+</body>
+</html>

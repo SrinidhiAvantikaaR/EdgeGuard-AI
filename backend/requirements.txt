@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+websockets
+numpy
+scikit-learn
+psutil
+onnxruntime
+onnx
+joblib
+pandas
+python-multipart
+py-cpuinfo
+skl2onnx
+watchdog
