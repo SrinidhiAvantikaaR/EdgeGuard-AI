@@ -144,7 +144,7 @@ Benchmark metrics include:
 * Scikit-learn
 * ONNX Runtime
 * psutil
-* Streamlit / React Dashboard
+* HTML/JS Dashboard
 * AMD Ryzen Multi-thread Optimization
 
 ---
