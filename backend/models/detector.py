@@ -55,6 +55,7 @@ class RansomwareDetector:
         
         # Try to load ONNX model
         self._load_onnx_session()
+        self.session = None
     
     def _load_onnx_session(self):
         """Load ONNX Runtime session if model exists"""
@@ -158,6 +159,7 @@ class RansomwareDetector:
                             raw = float(output[0][0]) if output.ndim > 1 else float(output[0])
                     else:
                         raw = float(output)
+                    print("ONNX raw output: ", raw)
                     
                     # ← REPLACE the old anomaly_score line with this:
                     anomaly_score = float(1 / (1 + np.exp(raw * 2)))
