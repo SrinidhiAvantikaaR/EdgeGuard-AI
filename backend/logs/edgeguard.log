@@ -1,364 +1,592 @@
-2026-03-01 19:36:17,339 - models.detector - INFO - Model loaded from data/models/isolation_forest.pkl
-2026-03-01 19:36:20,383 - models.detector - INFO - OpenVINO Execution Provider enabled for AMD
-2026-03-01 19:36:51,341 - models.detector - INFO - ONNX model loaded successfully
-2026-03-01 19:36:57,261 - amd_optimized.onnx_inference - INFO - OpenVINO Execution Provider enabled
-2026-03-01 19:36:58,608 - amd_optimized.onnx_inference - INFO - ONNX Runtime providers: ['CPUExecutionProvider']
-2026-03-01 19:36:58,608 - amd_optimized.onnx_inference - INFO - AMD ONNX Inference initialized
-2026-03-01 19:36:58,609 - amd_optimized.onnx_inference - INFO -   CPU: AMD Ryzen 5 5600H with Radeon Graphics
-2026-03-01 19:36:58,609 - amd_optimized.onnx_inference - INFO -   Threads: 12
-2026-03-01 19:36:58,609 - amd_optimized.onnx_inference - INFO -   AMD Optimized: True
-2026-03-01 19:36:58,610 - amd_optimized.onnx_inference - INFO - Set CPU affinity to first 6 physical cores
-2026-03-01 19:36:58,612 - amd_optimized.onnx_inference - INFO - AMD optimizations applied successfully
-2026-03-01 19:36:58,612 - __main__ - INFO - ONNX model loaded with AMD optimizations
-2026-03-01 19:36:58,710 - __main__ - INFO - Frontend build not found, API only mode
-2026-03-01 19:36:59,118 - models.detector - INFO - Model loaded from data/models/isolation_forest.pkl
-2026-03-01 19:37:02,280 - models.detector - INFO - OpenVINO Execution Provider enabled for AMD
-2026-03-01 19:37:33,280 - models.detector - INFO - ONNX model loaded successfully
-2026-03-01 19:37:39,350 - amd_optimized.onnx_inference - INFO - OpenVINO Execution Provider enabled
-2026-03-01 19:37:40,751 - amd_optimized.onnx_inference - INFO - ONNX Runtime providers: ['CPUExecutionProvider']
-2026-03-01 19:37:40,751 - amd_optimized.onnx_inference - INFO - AMD ONNX Inference initialized
-2026-03-01 19:37:40,752 - amd_optimized.onnx_inference - INFO -   CPU: AMD Ryzen 5 5600H with Radeon Graphics
-2026-03-01 19:37:40,752 - amd_optimized.onnx_inference - INFO -   Threads: 12
-2026-03-01 19:37:40,753 - amd_optimized.onnx_inference - INFO -   AMD Optimized: True
-2026-03-01 19:37:40,753 - amd_optimized.onnx_inference - INFO - Set CPU affinity to first 6 physical cores
-2026-03-01 19:37:40,754 - amd_optimized.onnx_inference - INFO - AMD optimizations applied successfully
-2026-03-01 19:37:40,755 - main - INFO - ONNX model loaded with AMD optimizations
-2026-03-01 19:37:40,765 - main - INFO - Frontend build not found, API only mode
-2026-03-01 19:37:40,767 - main - INFO - ==================================================
-2026-03-01 19:37:40,768 - main - INFO - Starting EdgeGuard AI Server
-2026-03-01 19:37:40,768 - main - INFO - ==================================================
-2026-03-01 19:37:43,820 - main - INFO - CPU: AMD Ryzen 5 5600H with Radeon Graphics
-2026-03-01 19:37:43,821 - main - INFO - Cores: 12 logical, 6 physical
-2026-03-01 19:37:43,821 - main - INFO - AMD Optimized: True
-2026-03-01 19:37:43,821 - main - INFO - AVX-512: False
-2026-03-01 19:37:43,822 - main - INFO - Model trained: True
-2026-03-01 19:37:43,822 - main - INFO - ONNX loaded: True
-2026-03-01 19:37:43,823 - monitor.file_monitor - INFO - Watching path: C:\Users\e2sri/Desktop
-2026-03-01 19:37:43,825 - main - INFO - System monitoring started
-2026-03-01 19:37:43,825 - main - INFO - EdgeGuard AI Server started successfully
-2026-03-01 19:37:43,825 - main - INFO - API Documentation: http://localhost:8000/api/docs
-2026-03-01 19:37:43,826 - main - INFO - WebSocket: ws://localhost:8000/ws
-2026-03-01 19:37:43,826 - main - INFO - Starting monitoring loop...
-2026-03-01 19:38:00,509 - main - INFO - unknown -> 0.1192
-2026-03-01 19:38:00,523 - main - INFO - zoom.exe -> 0.1192
-2026-03-01 19:38:00,538 - main - INFO - lsaiso.exe -> 0.1192
-2026-03-01 19:38:00,553 - main - INFO - browserhost.exe -> 0.1192
-2026-03-01 19:38:00,571 - main - INFO - chrome.exe -> 0.1192
-2026-03-01 19:38:00,585 - main - INFO - powershell.exe -> 0.1192
-2026-03-01 19:38:00,602 - main - INFO - chrome.exe -> 0.1192
-2026-03-01 19:38:00,618 - main - INFO - chrome.exe -> 0.1192
-2026-03-01 19:38:00,631 - main - INFO - code.exe -> 0.1192
-2026-03-01 19:38:00,646 - main - INFO - discord.exe -> 0.1192
-2026-03-01 19:38:00,665 - main - INFO - msedgewebview2.exe -> 0.1192
-2026-03-01 19:38:00,679 - main - INFO - loom.exe -> 0.1192
-2026-03-01 19:38:00,699 - main - INFO - bdservicehost.exe -> 0.1192
-2026-03-01 19:38:00,715 - main - INFO - bdservicehost.exe -> 0.1192
-2026-03-01 19:38:00,729 - main - INFO - bdtrackersnmh.exe -> 0.1192
-2026-03-01 19:38:17,686 - main - INFO - unknown -> 0.1192
-2026-03-01 19:38:17,698 - main - INFO - zoom.exe -> 0.1192
-2026-03-01 19:38:17,711 - main - INFO - lsaiso.exe -> 0.1192
-2026-03-01 19:38:17,722 - main - INFO - browserhost.exe -> 0.1192
-2026-03-01 19:38:17,735 - main - INFO - chrome.exe -> 0.1192
-2026-03-01 19:38:17,748 - main - INFO - powershell.exe -> 0.1192
-2026-03-01 19:38:17,761 - main - INFO - chrome.exe -> 0.1192
-2026-03-01 19:38:17,773 - main - INFO - chrome.exe -> 0.1192
-2026-03-01 19:38:17,786 - main - INFO - code.exe -> 0.1192
-2026-03-01 19:38:17,798 - main - INFO - discord.exe -> 0.1192
-2026-03-01 19:38:17,810 - main - INFO - msedgewebview2.exe -> 0.1192
-2026-03-01 19:38:17,820 - main - INFO - loom.exe -> 0.1192
-2026-03-01 19:38:17,833 - main - INFO - bdservicehost.exe -> 0.1192
-2026-03-01 19:38:17,847 - main - INFO - bdservicehost.exe -> 0.1192
-2026-03-01 19:38:17,858 - main - INFO - bdtrackersnmh.exe -> 0.1192
-2026-03-01 19:38:34,924 - main - INFO - unknown -> 0.1192
-2026-03-01 19:38:34,935 - main - INFO - zoom.exe -> 0.1192
-2026-03-01 19:38:34,947 - main - INFO - lsaiso.exe -> 0.1192
-2026-03-01 19:38:34,963 - main - INFO - browserhost.exe -> 0.1192
-2026-03-01 19:38:34,976 - main - INFO - chrome.exe -> 0.1192
-2026-03-01 19:38:34,987 - main - INFO - powershell.exe -> 0.1192
-2026-03-01 19:38:35,000 - main - INFO - chrome.exe -> 0.1192
-2026-03-01 19:38:35,016 - main - INFO - chrome.exe -> 0.1192
-2026-03-01 19:38:35,028 - main - INFO - code.exe -> 0.1192
-2026-03-01 19:38:35,041 - main - INFO - discord.exe -> 0.1192
-2026-03-01 19:38:35,058 - main - INFO - msedgewebview2.exe -> 0.1192
-2026-03-01 19:38:35,069 - main - INFO - loom.exe -> 0.1192
-2026-03-01 19:38:35,083 - main - INFO - bdservicehost.exe -> 0.1192
-2026-03-01 19:38:35,100 - main - INFO - bdservicehost.exe -> 0.1192
-2026-03-01 19:38:35,113 - main - INFO - bdtrackersnmh.exe -> 0.1192
-2026-03-01 19:38:52,439 - main - INFO - unknown -> 0.1192
-2026-03-01 19:38:52,452 - main - INFO - zoom.exe -> 0.1192
-2026-03-01 19:38:52,463 - main - INFO - lsaiso.exe -> 0.1192
-2026-03-01 19:38:52,473 - main - INFO - browserhost.exe -> 0.1192
-2026-03-01 19:38:52,488 - main - INFO - chrome.exe -> 0.1192
-2026-03-01 19:38:52,500 - main - INFO - powershell.exe -> 0.1192
-2026-03-01 19:38:52,512 - main - INFO - chrome.exe -> 0.1192
-2026-03-01 19:38:52,525 - main - INFO - chrome.exe -> 0.1192
-2026-03-01 19:38:52,539 - main - INFO - code.exe -> 0.1192
-2026-03-01 19:38:52,550 - main - INFO - discord.exe -> 0.1192
-2026-03-01 19:38:52,562 - main - INFO - msedgewebview2.exe -> 0.1192
-2026-03-01 19:38:52,577 - main - INFO - loom.exe -> 0.1192
-2026-03-01 19:38:52,593 - main - INFO - bdservicehost.exe -> 0.1192
-2026-03-01 19:38:52,605 - main - INFO - bdservicehost.exe -> 0.1192
-2026-03-01 19:38:52,617 - main - INFO - bdtrackersnmh.exe -> 0.1192
-2026-03-01 19:38:52,724 - main - INFO - Shutting down EdgeGuard AI Server...
-2026-03-01 19:38:52,726 - main - INFO - System monitoring stopped
-2026-03-01 19:38:52,885 - models.detector - INFO - Model saved to data/models/isolation_forest.pkl
-2026-03-01 19:38:52,886 - main - INFO - EdgeGuard AI Server stopped
-2026-03-01 19:50:15,059 - models.detector - INFO - Model loaded from data/models/isolation_forest.pkl
-2026-03-01 19:50:18,070 - models.detector - INFO - OpenVINO Execution Provider enabled for AMD
-2026-03-01 19:50:48,790 - models.detector - INFO - ONNX model loaded successfully
-2026-03-01 19:50:54,708 - amd_optimized.onnx_inference - INFO - OpenVINO Execution Provider enabled
-2026-03-01 19:50:55,957 - amd_optimized.onnx_inference - INFO - ONNX Runtime providers: ['CPUExecutionProvider']
-2026-03-01 19:50:55,957 - amd_optimized.onnx_inference - INFO - AMD ONNX Inference initialized
-2026-03-01 19:50:55,958 - amd_optimized.onnx_inference - INFO -   CPU: AMD Ryzen 5 5600H with Radeon Graphics
-2026-03-01 19:50:55,959 - amd_optimized.onnx_inference - INFO -   Threads: 12
-2026-03-01 19:50:55,959 - amd_optimized.onnx_inference - INFO -   AMD Optimized: True
-2026-03-01 19:50:55,960 - amd_optimized.onnx_inference - INFO - Set CPU affinity to first 6 physical cores
-2026-03-01 19:50:55,962 - amd_optimized.onnx_inference - INFO - AMD optimizations applied successfully
-2026-03-01 19:50:55,963 - __main__ - INFO - ONNX model loaded with AMD optimizations
-2026-03-01 19:50:56,048 - __main__ - INFO - Frontend build not found, API only mode
-2026-03-01 19:50:56,402 - models.detector - INFO - Model loaded from data/models/isolation_forest.pkl
-2026-03-01 19:50:59,545 - models.detector - INFO - OpenVINO Execution Provider enabled for AMD
-2026-03-01 19:51:30,544 - models.detector - INFO - ONNX model loaded successfully
-2026-03-01 19:51:36,648 - amd_optimized.onnx_inference - INFO - OpenVINO Execution Provider enabled
-2026-03-01 19:51:38,056 - amd_optimized.onnx_inference - INFO - ONNX Runtime providers: ['CPUExecutionProvider']
-2026-03-01 19:51:38,057 - amd_optimized.onnx_inference - INFO - AMD ONNX Inference initialized
-2026-03-01 19:51:38,057 - amd_optimized.onnx_inference - INFO -   CPU: AMD Ryzen 5 5600H with Radeon Graphics
-2026-03-01 19:51:38,057 - amd_optimized.onnx_inference - INFO -   Threads: 12
-2026-03-01 19:51:38,058 - amd_optimized.onnx_inference - INFO -   AMD Optimized: True
-2026-03-01 19:51:38,059 - amd_optimized.onnx_inference - INFO - Set CPU affinity to first 6 physical cores
-2026-03-01 19:51:38,060 - amd_optimized.onnx_inference - INFO - AMD optimizations applied successfully
-2026-03-01 19:51:38,060 - main - INFO - ONNX model loaded with AMD optimizations
-2026-03-01 19:51:38,074 - main - INFO - Frontend build not found, API only mode
-2026-03-01 19:51:38,077 - main - INFO - ==================================================
-2026-03-01 19:51:38,077 - main - INFO - Starting EdgeGuard AI Server
-2026-03-01 19:51:38,078 - main - INFO - ==================================================
-2026-03-01 19:51:41,094 - main - INFO - CPU: AMD Ryzen 5 5600H with Radeon Graphics
-2026-03-01 19:51:41,094 - main - INFO - Cores: 12 logical, 6 physical
-2026-03-01 19:51:41,095 - main - INFO - AMD Optimized: True
-2026-03-01 19:51:41,095 - main - INFO - AVX-512: False
-2026-03-01 19:51:41,095 - main - INFO - Model trained: True
-2026-03-01 19:51:41,096 - main - INFO - ONNX loaded: True
-2026-03-01 19:51:41,097 - monitor.file_monitor - INFO - Watching path: C:\Users\e2sri/Desktop
-2026-03-01 19:51:41,100 - main - INFO - System monitoring started
-2026-03-01 19:51:41,101 - main - INFO - EdgeGuard AI Server started successfully
-2026-03-01 19:51:41,102 - main - INFO - API Documentation: http://localhost:8000/api/docs
-2026-03-01 19:51:41,102 - main - INFO - WebSocket: ws://localhost:8000/ws
-2026-03-01 19:51:41,103 - main - INFO - Starting monitoring loop...
-2026-03-01 19:51:57,320 - main - INFO - unknown -> 0.1192
-2026-03-01 19:51:57,331 - main - INFO - zoom.exe -> 0.1192
-2026-03-01 19:51:57,344 - main - INFO - chrome.exe -> 0.1192
-2026-03-01 19:51:57,362 - main - INFO - lsaiso.exe -> 0.1192
-2026-03-01 19:51:57,378 - main - INFO - browserhost.exe -> 0.1192
-2026-03-01 19:51:57,392 - main - INFO - chrome.exe -> 0.1192
-2026-03-01 19:51:57,409 - main - INFO - powershell.exe -> 0.1192
-2026-03-01 19:51:57,421 - main - INFO - chrome.exe -> 0.1192
-2026-03-01 19:51:57,433 - main - INFO - chrome.exe -> 0.1192
-2026-03-01 19:51:57,453 - main - INFO - code.exe -> 0.1192
-2026-03-01 19:51:57,467 - main - INFO - discord.exe -> 0.1192
-2026-03-01 19:51:57,480 - main - INFO - msedgewebview2.exe -> 0.1192
-2026-03-01 19:51:57,495 - main - INFO - loom.exe -> 0.1192
-2026-03-01 19:51:57,513 - main - INFO - bdservicehost.exe -> 0.1192
-2026-03-01 19:51:57,527 - main - INFO - bdservicehost.exe -> 0.1192
-2026-03-01 19:51:57,543 - main - INFO - bdtrackersnmh.exe -> 0.1192
-2026-03-01 19:52:14,348 - main - INFO - unknown -> 0.1192
-2026-03-01 19:52:14,360 - main - INFO - zoom.exe -> 0.1192
-2026-03-01 19:52:14,372 - main - INFO - lsaiso.exe -> 0.1192
-2026-03-01 19:52:14,384 - main - INFO - browserhost.exe -> 0.1192
-2026-03-01 19:52:14,402 - main - INFO - chrome.exe -> 0.1192
-2026-03-01 19:52:14,415 - main - INFO - powershell.exe -> 0.1192
-2026-03-01 19:52:14,426 - main - INFO - chrome.exe -> 0.1192
-2026-03-01 19:52:14,441 - main - INFO - chrome.exe -> 0.1192
-2026-03-01 19:52:14,456 - main - INFO - code.exe -> 0.1192
-2026-03-01 19:52:14,468 - main - INFO - discord.exe -> 0.1192
-2026-03-01 19:52:14,478 - main - INFO - msedgewebview2.exe -> 0.1192
-2026-03-01 19:52:14,508 - main - INFO - loom.exe -> 0.1192
-2026-03-01 19:52:14,527 - main - INFO - bdservicehost.exe -> 0.1192
-2026-03-01 19:52:14,557 - main - INFO - bdservicehost.exe -> 0.1192
-2026-03-01 19:52:14,577 - main - INFO - bdtrackersnmh.exe -> 0.1192
-2026-03-01 19:52:31,554 - main - INFO - unknown -> 0.1192
-2026-03-01 19:52:31,566 - main - INFO - zoom.exe -> 0.1192
-2026-03-01 19:52:31,581 - main - INFO - lsaiso.exe -> 0.1192
-2026-03-01 19:52:31,593 - main - INFO - browserhost.exe -> 0.1192
-2026-03-01 19:52:31,607 - main - INFO - chrome.exe -> 0.1192
-2026-03-01 19:52:31,624 - main - INFO - powershell.exe -> 0.1192
-2026-03-01 19:52:31,640 - main - INFO - chrome.exe -> 0.1192
-2026-03-01 19:52:31,652 - main - INFO - chrome.exe -> 0.1192
-2026-03-01 19:52:31,668 - main - INFO - code.exe -> 0.1192
-2026-03-01 19:52:31,683 - main - INFO - discord.exe -> 0.1192
-2026-03-01 19:52:31,697 - main - INFO - msedgewebview2.exe -> 0.1192
-2026-03-01 19:52:31,713 - main - INFO - loom.exe -> 0.1192
-2026-03-01 19:52:31,728 - main - INFO - bdservicehost.exe -> 0.1192
-2026-03-01 19:52:31,742 - main - INFO - bdservicehost.exe -> 0.1192
-2026-03-01 19:52:31,754 - main - INFO - bdtrackersnmh.exe -> 0.1192
-2026-03-01 19:52:31,864 - main - INFO - Shutting down EdgeGuard AI Server...
-2026-03-01 19:52:31,867 - main - INFO - System monitoring stopped
-2026-03-01 19:52:32,052 - models.detector - INFO - Model saved to data/models/isolation_forest.pkl
-2026-03-01 19:52:32,053 - main - INFO - EdgeGuard AI Server stopped
-2026-03-01 20:10:34,281 - models.detector - INFO - Model loaded from data/models/isolation_forest.pkl
-2026-03-01 20:10:37,795 - models.detector - INFO - OpenVINO Execution Provider enabled for AMD
-2026-03-01 20:11:08,525 - models.detector - INFO - ONNX model loaded successfully
-2026-03-01 20:11:14,587 - amd_optimized.onnx_inference - INFO - OpenVINO Execution Provider enabled
-2026-03-01 20:11:15,879 - amd_optimized.onnx_inference - INFO - ONNX Runtime providers: ['CPUExecutionProvider']
-2026-03-01 20:11:15,880 - amd_optimized.onnx_inference - INFO - AMD ONNX Inference initialized
-2026-03-01 20:11:15,880 - amd_optimized.onnx_inference - INFO -   CPU: AMD Ryzen 5 5600H with Radeon Graphics
-2026-03-01 20:11:15,880 - amd_optimized.onnx_inference - INFO -   Threads: 12
-2026-03-01 20:11:15,881 - amd_optimized.onnx_inference - INFO -   AMD Optimized: True
-2026-03-01 20:11:15,882 - amd_optimized.onnx_inference - INFO - Set CPU affinity to first 6 physical cores
-2026-03-01 20:11:15,883 - amd_optimized.onnx_inference - INFO - AMD optimizations applied successfully
-2026-03-01 20:11:15,883 - __main__ - INFO - ONNX model loaded with AMD optimizations
-2026-03-01 20:11:15,966 - __main__ - INFO - Frontend build not found, API only mode
-2026-03-01 20:11:16,317 - models.detector - INFO - Model loaded from data/models/isolation_forest.pkl
-2026-03-01 20:11:19,431 - models.detector - INFO - OpenVINO Execution Provider enabled for AMD
-2026-03-01 20:11:49,515 - models.detector - INFO - ONNX model loaded successfully
-2026-03-01 20:11:55,725 - amd_optimized.onnx_inference - INFO - OpenVINO Execution Provider enabled
-2026-03-01 20:11:57,243 - amd_optimized.onnx_inference - INFO - ONNX Runtime providers: ['CPUExecutionProvider']
-2026-03-01 20:11:57,244 - amd_optimized.onnx_inference - INFO - AMD ONNX Inference initialized
-2026-03-01 20:11:57,244 - amd_optimized.onnx_inference - INFO -   CPU: AMD Ryzen 5 5600H with Radeon Graphics
-2026-03-01 20:11:57,245 - amd_optimized.onnx_inference - INFO -   Threads: 12
-2026-03-01 20:11:57,245 - amd_optimized.onnx_inference - INFO -   AMD Optimized: True
-2026-03-01 20:11:57,247 - amd_optimized.onnx_inference - INFO - Set CPU affinity to first 6 physical cores
-2026-03-01 20:11:57,248 - amd_optimized.onnx_inference - INFO - AMD optimizations applied successfully
-2026-03-01 20:11:57,249 - main - INFO - ONNX model loaded with AMD optimizations
-2026-03-01 20:11:57,260 - main - INFO - Frontend build not found, API only mode
-2026-03-01 20:11:57,264 - main - INFO - ==================================================
-2026-03-01 20:11:57,265 - main - INFO - Starting EdgeGuard AI Server
-2026-03-01 20:11:57,265 - main - INFO - ==================================================
-2026-03-01 20:12:00,301 - main - INFO - CPU: AMD Ryzen 5 5600H with Radeon Graphics
-2026-03-01 20:12:00,301 - main - INFO - Cores: 12 logical, 6 physical
-2026-03-01 20:12:00,302 - main - INFO - AMD Optimized: True
-2026-03-01 20:12:00,302 - main - INFO - AVX-512: False
-2026-03-01 20:12:00,302 - main - INFO - Model trained: True
-2026-03-01 20:12:00,303 - main - INFO - ONNX loaded: True
-2026-03-01 20:12:00,303 - monitor.file_monitor - INFO - Watching path: C:\Users\e2sri/Desktop
-2026-03-01 20:12:00,305 - main - INFO - System monitoring started
-2026-03-01 20:12:00,306 - main - INFO - EdgeGuard AI Server started successfully
-2026-03-01 20:12:00,306 - main - INFO - API Documentation: http://localhost:8000/api/docs
-2026-03-01 20:12:00,307 - main - INFO - WebSocket: ws://localhost:8000/ws
-2026-03-01 20:12:00,307 - main - INFO - Starting monitoring loop...
-2026-03-01 20:12:16,421 - main - INFO - unknown -> 0.1192
-2026-03-01 20:12:16,433 - main - INFO - zoom.exe -> 0.1192
-2026-03-01 20:12:16,445 - main - INFO - lsaiso.exe -> 0.1192
-2026-03-01 20:12:16,458 - main - INFO - browserhost.exe -> 0.1192
-2026-03-01 20:12:16,472 - main - INFO - chrome.exe -> 0.1192
-2026-03-01 20:12:16,485 - main - INFO - powershell.exe -> 0.1192
-2026-03-01 20:12:16,497 - main - INFO - chrome.exe -> 0.1192
-2026-03-01 20:12:16,511 - main - INFO - chrome.exe -> 0.1192
-2026-03-01 20:12:16,524 - main - INFO - code.exe -> 0.1192
-2026-03-01 20:12:16,536 - main - INFO - discord.exe -> 0.1192
-2026-03-01 20:12:16,553 - main - INFO - msedgewebview2.exe -> 0.1192
-2026-03-01 20:12:16,568 - main - INFO - loom.exe -> 0.1192
-2026-03-01 20:12:16,581 - main - INFO - bdservicehost.exe -> 0.1192
-2026-03-01 20:12:16,594 - main - INFO - bdservicehost.exe -> 0.1192
-2026-03-01 20:12:16,615 - main - INFO - bdtrackersnmh.exe -> 0.1192
-2026-03-01 20:12:34,332 - main - INFO - unknown -> 0.1192
-2026-03-01 20:12:34,346 - main - INFO - zoom.exe -> 0.1192
-2026-03-01 20:12:34,358 - main - INFO - lsaiso.exe -> 0.1192
-2026-03-01 20:12:34,371 - main - INFO - browserhost.exe -> 0.1192
-2026-03-01 20:12:34,384 - main - INFO - chrome.exe -> 0.1192
-2026-03-01 20:12:34,402 - main - INFO - powershell.exe -> 0.1192
-2026-03-01 20:12:34,415 - main - INFO - chrome.exe -> 0.1192
-2026-03-01 20:12:34,428 - main - INFO - chrome.exe -> 0.1192
-2026-03-01 20:12:34,442 - main - INFO - code.exe -> 0.1192
-2026-03-01 20:12:34,454 - main - INFO - discord.exe -> 0.1192
-2026-03-01 20:12:34,467 - main - INFO - msedgewebview2.exe -> 0.1192
-2026-03-01 20:12:34,483 - main - INFO - loom.exe -> 0.1192
-2026-03-01 20:12:34,498 - main - INFO - bdservicehost.exe -> 0.1192
-2026-03-01 20:12:34,510 - main - INFO - bdservicehost.exe -> 0.1192
-2026-03-01 20:12:34,522 - main - INFO - bdtrackersnmh.exe -> 0.1192
-2026-03-01 20:12:34,645 - main - INFO - Shutting down EdgeGuard AI Server...
-2026-03-01 20:12:34,648 - main - INFO - System monitoring stopped
-2026-03-01 20:12:34,828 - models.detector - INFO - Model saved to data/models/isolation_forest.pkl
-2026-03-01 20:12:34,829 - main - INFO - EdgeGuard AI Server stopped
-2026-03-01 20:15:20,355 - models.detector - INFO - Model loaded from data/models/isolation_forest.pkl
-2026-03-01 20:15:23,529 - models.detector - INFO - OpenVINO Execution Provider enabled for AMD
-2026-03-01 20:15:55,081 - models.detector - INFO - ONNX model loaded successfully
-2026-03-01 20:16:01,335 - amd_optimized.onnx_inference - INFO - OpenVINO Execution Provider enabled
-2026-03-01 20:16:02,684 - amd_optimized.onnx_inference - INFO - ONNX Runtime providers: ['CPUExecutionProvider']
-2026-03-01 20:16:02,685 - amd_optimized.onnx_inference - INFO - AMD ONNX Inference initialized
-2026-03-01 20:16:02,685 - amd_optimized.onnx_inference - INFO -   CPU: AMD Ryzen 5 5600H with Radeon Graphics
-2026-03-01 20:16:02,686 - amd_optimized.onnx_inference - INFO -   Threads: 12
-2026-03-01 20:16:02,686 - amd_optimized.onnx_inference - INFO -   AMD Optimized: True
-2026-03-01 20:16:02,688 - amd_optimized.onnx_inference - INFO - Set CPU affinity to first 6 physical cores
-2026-03-01 20:16:02,689 - amd_optimized.onnx_inference - INFO - AMD optimizations applied successfully
-2026-03-01 20:16:02,689 - __main__ - INFO - ONNX model loaded with AMD optimizations
-2026-03-01 20:16:02,771 - __main__ - INFO - Frontend build not found, API only mode
-2026-03-01 20:16:03,127 - models.detector - INFO - Model loaded from data/models/isolation_forest.pkl
-2026-03-01 20:16:06,286 - models.detector - INFO - OpenVINO Execution Provider enabled for AMD
-2026-03-01 20:16:38,197 - models.detector - INFO - ONNX model loaded successfully
-2026-03-01 20:16:44,287 - amd_optimized.onnx_inference - INFO - OpenVINO Execution Provider enabled
-2026-03-01 20:16:45,764 - amd_optimized.onnx_inference - INFO - ONNX Runtime providers: ['CPUExecutionProvider']
-2026-03-01 20:16:45,765 - amd_optimized.onnx_inference - INFO - AMD ONNX Inference initialized
-2026-03-01 20:16:45,765 - amd_optimized.onnx_inference - INFO -   CPU: AMD Ryzen 5 5600H with Radeon Graphics
-2026-03-01 20:16:45,766 - amd_optimized.onnx_inference - INFO -   Threads: 12
-2026-03-01 20:16:45,767 - amd_optimized.onnx_inference - INFO -   AMD Optimized: True
-2026-03-01 20:16:45,768 - amd_optimized.onnx_inference - INFO - Set CPU affinity to first 6 physical cores
-2026-03-01 20:16:45,769 - amd_optimized.onnx_inference - INFO - AMD optimizations applied successfully
-2026-03-01 20:16:45,770 - main - INFO - ONNX model loaded with AMD optimizations
-2026-03-01 20:16:45,790 - main - INFO - Frontend build not found, API only mode
-2026-03-01 20:16:45,792 - main - INFO - ==================================================
-2026-03-01 20:16:45,793 - main - INFO - Starting EdgeGuard AI Server
-2026-03-01 20:16:45,793 - main - INFO - ==================================================
-2026-03-01 20:16:48,837 - main - INFO - CPU: AMD Ryzen 5 5600H with Radeon Graphics
-2026-03-01 20:16:48,837 - main - INFO - Cores: 12 logical, 6 physical
-2026-03-01 20:16:48,838 - main - INFO - AMD Optimized: True
-2026-03-01 20:16:48,838 - main - INFO - AVX-512: False
-2026-03-01 20:16:48,838 - main - INFO - Model trained: True
-2026-03-01 20:16:48,839 - main - INFO - ONNX loaded: True
-2026-03-01 20:16:48,840 - monitor.file_monitor - INFO - Watching path: C:\Users\e2sri/Desktop
-2026-03-01 20:16:48,843 - main - INFO - System monitoring started
-2026-03-01 20:16:48,843 - main - INFO - EdgeGuard AI Server started successfully
-2026-03-01 20:16:48,844 - main - INFO - API Documentation: http://localhost:8000/api/docs
-2026-03-01 20:16:48,844 - main - INFO - WebSocket: ws://localhost:8000/ws
-2026-03-01 20:16:48,845 - main - INFO - Starting monitoring loop...
-2026-03-01 20:17:05,320 - main - INFO - unknown -> 0.4496
-2026-03-01 20:17:05,355 - main - INFO - zoom.exe -> 0.4441
-2026-03-01 20:17:05,388 - main - INFO - backgroundtaskhost.exe -> 0.4465
-2026-03-01 20:17:05,420 - main - INFO - lsaiso.exe -> 0.4496
-2026-03-01 20:17:05,451 - main - INFO - browserhost.exe -> 0.4459
-2026-03-01 20:17:05,481 - main - INFO - chrome.exe -> 0.4439
-2026-03-01 20:17:05,526 - main - INFO - powershell.exe -> 0.4459
-2026-03-01 20:17:05,567 - main - INFO - chrome.exe -> 0.4446
-2026-03-01 20:17:05,600 - main - INFO - chrome.exe -> 0.4438
-2026-03-01 20:17:05,630 - main - INFO - code.exe -> 0.4857
-2026-03-01 20:17:05,662 - main - INFO - discord.exe -> 0.4458
-2026-03-01 20:17:05,696 - main - INFO - msedgewebview2.exe -> 0.4464
-2026-03-01 20:17:05,725 - main - INFO - loom.exe -> 0.4442
-2026-03-01 20:17:05,758 - main - INFO - bdservicehost.exe -> 0.4844
-2026-03-01 20:17:05,791 - main - INFO - bdservicehost.exe -> 0.4464
-2026-03-01 20:17:05,829 - main - INFO - bdtrackersnmh.exe -> 0.4469
-2026-03-01 20:17:23,074 - main - INFO - unknown -> 0.4496
-2026-03-01 20:17:23,104 - main - INFO - zoom.exe -> 0.4447
-2026-03-01 20:17:23,136 - main - INFO - backgroundtaskhost.exe -> 0.4465
-2026-03-01 20:17:23,166 - main - INFO - lsaiso.exe -> 0.4496
-2026-03-01 20:17:23,194 - main - INFO - browserhost.exe -> 0.4459
-2026-03-01 20:17:23,225 - main - INFO - chrome.exe -> 0.4439
-2026-03-01 20:17:23,262 - main - INFO - powershell.exe -> 0.4459
-2026-03-01 20:17:23,298 - main - INFO - chrome.exe -> 0.4446
-2026-03-01 20:17:23,333 - main - INFO - chrome.exe -> 0.4438
-2026-03-01 20:17:23,364 - main - INFO - code.exe -> 0.4857
-2026-03-01 20:17:23,412 - main - INFO - discord.exe -> 0.4458
-2026-03-01 20:17:23,462 - main - INFO - msedgewebview2.exe -> 0.4464
-2026-03-01 20:17:23,502 - main - INFO - loom.exe -> 0.4442
-2026-03-01 20:17:23,540 - main - INFO - bdservicehost.exe -> 0.4852
-2026-03-01 20:17:23,576 - main - INFO - bdservicehost.exe -> 0.4464
-2026-03-01 20:17:23,610 - main - INFO - bdtrackersnmh.exe -> 0.4469
-2026-03-01 20:17:40,935 - main - INFO - unknown -> 0.4496
-2026-03-01 20:17:40,964 - main - INFO - zoom.exe -> 0.4441
-2026-03-01 20:17:41,000 - main - INFO - backgroundtaskhost.exe -> 0.4465
-2026-03-01 20:17:41,034 - main - INFO - lsaiso.exe -> 0.4496
-2026-03-01 20:17:41,066 - main - INFO - browserhost.exe -> 0.4459
-2026-03-01 20:17:41,100 - main - INFO - chrome.exe -> 0.4439
-2026-03-01 20:17:41,140 - main - INFO - powershell.exe -> 0.4459
-2026-03-01 20:17:41,175 - main - INFO - chrome.exe -> 0.4446
-2026-03-01 20:17:41,206 - main - INFO - chrome.exe -> 0.4438
-2026-03-01 20:17:41,242 - main - INFO - code.exe -> 0.4857
-2026-03-01 20:17:41,278 - main - INFO - discord.exe -> 0.4458
-2026-03-01 20:17:41,316 - main - INFO - msedgewebview2.exe -> 0.4464
-2026-03-01 20:17:41,351 - main - INFO - loom.exe -> 0.4442
-2026-03-01 20:17:41,383 - main - INFO - bdservicehost.exe -> 0.4850
-2026-03-01 20:17:41,418 - main - INFO - bdservicehost.exe -> 0.4464
-2026-03-01 20:17:41,449 - main - INFO - bdtrackersnmh.exe -> 0.4469
-2026-03-01 20:17:41,566 - main - INFO - Shutting down EdgeGuard AI Server...
-2026-03-01 20:17:41,569 - main - INFO - System monitoring stopped
-2026-03-01 20:17:41,744 - models.detector - INFO - Model saved to data/models/isolation_forest.pkl
-2026-03-01 20:17:41,744 - main - INFO - EdgeGuard AI Server stopped
+2026-03-01 21:59:04,235 - models.detector - INFO - Model loaded from data/models/isolation_forest.pkl
+2026-03-01 21:59:07,601 - models.detector - INFO - OpenVINO Execution Provider enabled for AMD
+2026-03-01 21:59:51,228 - models.detector - INFO - ONNX model loaded successfully
+2026-03-01 21:59:57,771 - amd_optimized.onnx_inference - INFO - OpenVINO Execution Provider enabled
+2026-03-01 21:59:59,184 - amd_optimized.onnx_inference - INFO - ONNX Runtime providers: ['CPUExecutionProvider']
+2026-03-01 21:59:59,185 - amd_optimized.onnx_inference - INFO - AMD ONNX Inference initialized
+2026-03-01 21:59:59,185 - amd_optimized.onnx_inference - INFO -   CPU: AMD Ryzen 5 5600H with Radeon Graphics
+2026-03-01 21:59:59,185 - amd_optimized.onnx_inference - INFO -   Threads: 12
+2026-03-01 21:59:59,186 - amd_optimized.onnx_inference - INFO -   AMD Optimized: True
+2026-03-01 21:59:59,187 - amd_optimized.onnx_inference - INFO - Set CPU affinity to first 6 physical cores
+2026-03-01 21:59:59,188 - amd_optimized.onnx_inference - INFO - AMD optimizations applied successfully
+2026-03-01 21:59:59,189 - main - INFO - ONNX model loaded with AMD optimizations
+2026-03-01 21:59:59,287 - main - INFO - Frontend build not found, API only mode
+2026-03-01 21:59:59,290 - main - INFO - ==================================================
+2026-03-01 21:59:59,290 - main - INFO - Starting EdgeGuard AI Server
+2026-03-01 21:59:59,291 - main - INFO - ==================================================
+2026-03-01 22:00:02,602 - main - INFO - CPU: AMD Ryzen 5 5600H with Radeon Graphics
+2026-03-01 22:00:02,603 - main - INFO - Cores: 12 logical, 6 physical
+2026-03-01 22:00:02,604 - main - INFO - AMD Optimized: True
+2026-03-01 22:00:02,604 - main - INFO - AVX-512: False
+2026-03-01 22:00:02,605 - main - INFO - Model trained: True
+2026-03-01 22:00:02,605 - main - INFO - ONNX loaded: True
+2026-03-01 22:00:02,606 - monitor.file_monitor - INFO - Watching path: C:\Users\e2sri/Desktop
+2026-03-01 22:00:02,609 - main - INFO - System monitoring started
+2026-03-01 22:00:02,609 - main - INFO - EdgeGuard AI Server started successfully
+2026-03-01 22:00:02,610 - main - INFO - API Documentation: http://localhost:8000/api/docs
+2026-03-01 22:00:02,610 - main - INFO - WebSocket: ws://localhost:8000/ws
+2026-03-01 22:00:02,611 - main - INFO - Starting monitoring loop...
+2026-03-01 22:00:21,960 - main - INFO - unknown -> 0.4496
+2026-03-01 22:00:22,003 - main - INFO - zoom.exe -> 0.4441
+2026-03-01 22:00:22,044 - main - INFO - lsaiso.exe -> 0.4496
+2026-03-01 22:00:22,081 - main - INFO - browserhost.exe -> 0.4456
+2026-03-01 22:00:22,123 - main - INFO - powershell.exe -> 0.4459
+2026-03-01 22:00:22,160 - main - INFO - chrome.exe -> 0.4440
+2026-03-01 22:00:22,200 - main - INFO - chrome.exe -> 0.4439
+2026-03-01 22:00:22,238 - main - INFO - wmiprvse.exe -> 0.4468
+2026-03-01 22:00:22,272 - main - INFO - code.exe -> 0.4857
+2026-03-01 22:00:22,306 - main - INFO - discord.exe -> 0.4458
+2026-03-01 22:00:22,341 - main - INFO - msedgewebview2.exe -> 0.4464
+2026-03-01 22:00:22,377 - main - INFO - loom.exe -> 0.4441
+2026-03-01 22:00:22,417 - main - INFO - bdservicehost.exe -> 0.4904
+2026-03-01 22:00:22,459 - main - INFO - bdservicehost.exe -> 0.4464
+2026-03-01 22:00:22,493 - main - INFO - bdtrackersnmh.exe -> 0.4469
+2026-03-01 22:00:44,513 - main - INFO - unknown -> 0.4496
+2026-03-01 22:00:44,545 - main - INFO - zoom.exe -> 0.4447
+2026-03-01 22:00:44,581 - main - INFO - lsaiso.exe -> 0.4496
+2026-03-01 22:00:44,618 - main - INFO - browserhost.exe -> 0.4456
+2026-03-01 22:00:44,656 - main - INFO - powershell.exe -> 0.4459
+2026-03-01 22:00:44,690 - main - INFO - chrome.exe -> 0.4441
+2026-03-01 22:00:44,726 - main - INFO - chrome.exe -> 0.4440
+2026-03-01 22:00:44,761 - main - INFO - wmiprvse.exe -> 0.4470
+2026-03-01 22:00:44,801 - main - INFO - code.exe -> 0.4857
+2026-03-01 22:00:44,836 - main - INFO - discord.exe -> 0.4458
+2026-03-01 22:00:44,872 - main - INFO - msedgewebview2.exe -> 0.4464
+2026-03-01 22:00:44,907 - main - INFO - loom.exe -> 0.4441
+2026-03-01 22:00:44,941 - main - INFO - bdservicehost.exe -> 0.4937
+2026-03-01 22:00:44,975 - main - INFO - bdservicehost.exe -> 0.4465
+2026-03-01 22:00:45,017 - main - INFO - bdtrackersnmh.exe -> 0.4469
+2026-03-01 22:00:45,033 - main - INFO - New WebSocket connection. Total: 1
+2026-03-01 22:01:07,610 - main - INFO - unknown -> 0.4496
+2026-03-01 22:01:07,646 - main - INFO - zoom.exe -> 0.4439
+2026-03-01 22:01:07,684 - main - INFO - lsaiso.exe -> 0.4496
+2026-03-01 22:01:07,722 - main - INFO - browserhost.exe -> 0.4456
+2026-03-01 22:01:07,759 - main - INFO - powershell.exe -> 0.4459
+2026-03-01 22:01:07,795 - main - INFO - chrome.exe -> 0.4439
+2026-03-01 22:01:07,833 - main - INFO - chrome.exe -> 0.4438
+2026-03-01 22:01:07,870 - main - INFO - wmiprvse.exe -> 0.4465
+2026-03-01 22:01:07,928 - main - INFO - code.exe -> 0.4853
+2026-03-01 22:01:07,963 - main - INFO - discord.exe -> 0.4458
+2026-03-01 22:01:07,999 - main - INFO - msedgewebview2.exe -> 0.4464
+2026-03-01 22:01:08,039 - main - INFO - loom.exe -> 0.4441
+2026-03-01 22:01:08,075 - main - INFO - bdservicehost.exe -> 0.4929
+2026-03-01 22:01:08,111 - main - INFO - bdservicehost.exe -> 0.4463
+2026-03-01 22:01:08,146 - main - INFO - bdtrackersnmh.exe -> 0.4469
+2026-03-01 22:01:28,386 - main - INFO - unknown -> 0.4496
+2026-03-01 22:01:28,426 - main - INFO - zoom.exe -> 0.4439
+2026-03-01 22:01:28,471 - main - INFO - lsaiso.exe -> 0.4496
+2026-03-01 22:01:28,514 - main - INFO - browserhost.exe -> 0.4456
+2026-03-01 22:01:28,556 - main - INFO - powershell.exe -> 0.4459
+2026-03-01 22:01:28,597 - main - INFO - chrome.exe -> 0.4441
+2026-03-01 22:01:28,637 - main - INFO - chrome.exe -> 0.4439
+2026-03-01 22:01:28,676 - main - INFO - wmiprvse.exe -> 0.4471
+2026-03-01 22:01:28,716 - main - INFO - code.exe -> 0.4853
+2026-03-01 22:01:28,751 - main - INFO - discord.exe -> 0.4458
+2026-03-01 22:01:28,784 - main - INFO - msedgewebview2.exe -> 0.4464
+2026-03-01 22:01:28,822 - main - INFO - loom.exe -> 0.4441
+2026-03-01 22:01:28,864 - main - INFO - bdservicehost.exe -> 0.4922
+2026-03-01 22:01:28,903 - main - INFO - bdservicehost.exe -> 0.4464
+2026-03-01 22:01:28,942 - main - INFO - bdtrackersnmh.exe -> 0.4469
+2026-03-01 22:01:28,948 - main - INFO - WebSocket disconnected. Total: 0
+2026-03-01 22:01:28,949 - main - INFO - WebSocket disconnected. Total: 0
+2026-03-01 22:01:29,060 - main - INFO - Shutting down EdgeGuard AI Server...
+2026-03-01 22:01:29,063 - main - INFO - System monitoring stopped
+2026-03-01 22:01:29,232 - models.detector - INFO - Model saved to data/models/isolation_forest.pkl
+2026-03-01 22:01:29,233 - main - INFO - EdgeGuard AI Server stopped
+2026-03-01 22:06:25,841 - models.detector - INFO - Model loaded from data/models/isolation_forest.pkl
+2026-03-01 22:06:29,737 - models.detector - INFO - OpenVINO Execution Provider enabled for AMD
+2026-03-01 22:07:05,501 - models.detector - INFO - ONNX model loaded successfully
+2026-03-01 22:07:12,183 - amd_optimized.onnx_inference - INFO - OpenVINO Execution Provider enabled
+2026-03-01 22:07:13,683 - amd_optimized.onnx_inference - INFO - ONNX Runtime providers: ['CPUExecutionProvider']
+2026-03-01 22:07:13,683 - amd_optimized.onnx_inference - INFO - AMD ONNX Inference initialized
+2026-03-01 22:07:13,684 - amd_optimized.onnx_inference - INFO -   CPU: AMD Ryzen 5 5600H with Radeon Graphics
+2026-03-01 22:07:13,684 - amd_optimized.onnx_inference - INFO -   Threads: 12
+2026-03-01 22:07:13,685 - amd_optimized.onnx_inference - INFO -   AMD Optimized: True
+2026-03-01 22:07:13,686 - amd_optimized.onnx_inference - INFO - Set CPU affinity to first 6 physical cores
+2026-03-01 22:07:13,688 - amd_optimized.onnx_inference - INFO - AMD optimizations applied successfully
+2026-03-01 22:07:13,688 - main - INFO - ONNX model loaded with AMD optimizations
+2026-03-01 22:07:13,852 - main - INFO - ==================================================
+2026-03-01 22:07:13,853 - main - INFO - Starting EdgeGuard AI Server
+2026-03-01 22:07:13,853 - main - INFO - ==================================================
+2026-03-01 22:07:17,162 - main - INFO - CPU: AMD Ryzen 5 5600H with Radeon Graphics
+2026-03-01 22:07:17,163 - main - INFO - Cores: 12 logical, 6 physical
+2026-03-01 22:07:17,163 - main - INFO - AMD Optimized: True
+2026-03-01 22:07:17,164 - main - INFO - AVX-512: False
+2026-03-01 22:07:17,164 - main - INFO - Model trained: True
+2026-03-01 22:07:17,165 - main - INFO - ONNX loaded: True
+2026-03-01 22:07:17,166 - monitor.file_monitor - INFO - Watching path: C:\Users\e2sri/Desktop
+2026-03-01 22:07:17,169 - main - INFO - System monitoring started
+2026-03-01 22:07:17,169 - main - INFO - EdgeGuard AI Server started successfully
+2026-03-01 22:07:17,170 - main - INFO - API Documentation: http://localhost:8000/api/docs
+2026-03-01 22:07:17,170 - main - INFO - WebSocket: ws://localhost:8000/ws
+2026-03-01 22:07:17,171 - main - INFO - Starting monitoring loop...
+2026-03-01 22:07:36,065 - main - INFO - unknown -> 0.4496
+2026-03-01 22:07:36,103 - main - INFO - zoom.exe -> 0.4441
+2026-03-01 22:07:36,141 - main - INFO - lsaiso.exe -> 0.4496
+2026-03-01 22:07:36,174 - main - INFO - browserhost.exe -> 0.4456
+2026-03-01 22:07:36,213 - main - INFO - powershell.exe -> 0.4459
+2026-03-01 22:07:36,258 - main - INFO - chrome.exe -> 0.4440
+2026-03-01 22:07:36,297 - main - INFO - chrome.exe -> 0.4440
+2026-03-01 22:07:36,335 - main - INFO - code.exe -> 0.4857
+2026-03-01 22:07:36,374 - main - INFO - discord.exe -> 0.4441
+2026-03-01 22:07:36,414 - main - INFO - msedgewebview2.exe -> 0.4464
+2026-03-01 22:07:36,464 - main - INFO - loom.exe -> 0.4441
+2026-03-01 22:07:36,499 - main - INFO - bdservicehost.exe -> 0.4901
+2026-03-01 22:07:36,535 - main - INFO - bdservicehost.exe -> 0.4464
+2026-03-01 22:07:36,569 - main - INFO - bdtrackersnmh.exe -> 0.4469
+2026-03-01 22:07:56,312 - main - INFO - unknown -> 0.4496
+2026-03-01 22:07:56,349 - main - INFO - zoom.exe -> 0.4442
+2026-03-01 22:07:56,391 - main - INFO - lsaiso.exe -> 0.4496
+2026-03-01 22:07:56,427 - main - INFO - browserhost.exe -> 0.4456
+2026-03-01 22:07:56,467 - main - INFO - powershell.exe -> 0.4459
+2026-03-01 22:07:56,503 - main - INFO - chrome.exe -> 0.4441
+2026-03-01 22:07:56,542 - main - INFO - chrome.exe -> 0.4440
+2026-03-01 22:07:56,580 - main - INFO - code.exe -> 0.4857
+2026-03-01 22:07:56,619 - main - INFO - discord.exe -> 0.4441
+2026-03-01 22:07:56,657 - main - INFO - msedgewebview2.exe -> 0.4464
+2026-03-01 22:07:56,698 - main - INFO - loom.exe -> 0.4441
+2026-03-01 22:07:56,735 - main - INFO - bdservicehost.exe -> 0.4904
+2026-03-01 22:07:56,771 - main - INFO - bdservicehost.exe -> 0.4464
+2026-03-01 22:07:56,808 - main - INFO - bdtrackersnmh.exe -> 0.4469
+2026-03-01 22:07:56,815 - main - INFO - New WebSocket connection. Total: 1
+2026-03-01 22:08:20,476 - main - INFO - unknown -> 0.4496
+2026-03-01 22:08:20,525 - main - INFO - zoom.exe -> 0.4439
+2026-03-01 22:08:20,573 - main - INFO - lsaiso.exe -> 0.4496
+2026-03-01 22:08:20,623 - main - INFO - browserhost.exe -> 0.4459
+2026-03-01 22:08:20,664 - main - INFO - powershell.exe -> 0.4475
+2026-03-01 22:08:20,712 - main - INFO - chrome.exe -> 0.4439
+2026-03-01 22:08:20,760 - main - INFO - chrome.exe -> 0.4440
+2026-03-01 22:08:20,805 - main - INFO - code.exe -> 0.4853
+2026-03-01 22:08:20,859 - main - INFO - discord.exe -> 0.4441
+2026-03-01 22:08:20,913 - main - INFO - msedgewebview2.exe -> 0.4464
+2026-03-01 22:08:20,963 - main - INFO - loom.exe -> 0.4441
+2026-03-01 22:08:21,009 - main - INFO - bdservicehost.exe -> 0.4901
+2026-03-01 22:08:21,062 - main - INFO - bdservicehost.exe -> 0.4464
+2026-03-01 22:08:21,112 - main - INFO - bdtrackersnmh.exe -> 0.4469
+2026-03-01 22:08:22,415 - main - INFO - New WebSocket connection. Total: 2
+2026-03-01 22:08:45,670 - main - INFO - unknown -> 0.4496
+2026-03-01 22:08:45,720 - main - INFO - zoom.exe -> 0.4438
+2026-03-01 22:08:45,776 - main - INFO - lsaiso.exe -> 0.4496
+2026-03-01 22:08:45,828 - main - INFO - browserhost.exe -> 0.4459
+2026-03-01 22:08:45,889 - main - INFO - powershell.exe -> 0.4475
+2026-03-01 22:08:45,936 - main - INFO - chrome.exe -> 0.4441
+2026-03-01 22:08:45,993 - main - INFO - chrome.exe -> 0.4440
+2026-03-01 22:08:46,046 - main - INFO - code.exe -> 0.4857
+2026-03-01 22:08:46,091 - main - INFO - discord.exe -> 0.4441
+2026-03-01 22:08:46,137 - main - INFO - msedgewebview2.exe -> 0.4464
+2026-03-01 22:08:46,181 - main - INFO - loom.exe -> 0.4441
+2026-03-01 22:08:46,234 - main - INFO - bdservicehost.exe -> 0.4884
+2026-03-01 22:08:46,288 - main - INFO - bdservicehost.exe -> 0.4464
+2026-03-01 22:08:46,347 - main - INFO - bdtrackersnmh.exe -> 0.4469
+2026-03-01 22:09:10,834 - main - INFO - unknown -> 0.4496
+2026-03-01 22:09:10,891 - main - INFO - zoom.exe -> 0.4444
+2026-03-01 22:09:10,950 - main - INFO - lsaiso.exe -> 0.4496
+2026-03-01 22:09:10,997 - main - INFO - browserhost.exe -> 0.4459
+2026-03-01 22:09:11,047 - main - INFO - powershell.exe -> 0.4475
+2026-03-01 22:09:11,096 - main - INFO - chrome.exe -> 0.4439
+2026-03-01 22:09:11,153 - main - INFO - chrome.exe -> 0.4440
+2026-03-01 22:09:11,198 - main - INFO - code.exe -> 0.4857
+2026-03-01 22:09:11,250 - main - INFO - discord.exe -> 0.4442
+2026-03-01 22:09:11,298 - main - INFO - msedgewebview2.exe -> 0.4464
+2026-03-01 22:09:11,349 - main - INFO - loom.exe -> 0.4441
+2026-03-01 22:09:11,395 - main - INFO - bdservicehost.exe -> 0.4885
+2026-03-01 22:09:11,455 - main - INFO - bdservicehost.exe -> 0.4464
+2026-03-01 22:09:11,501 - main - INFO - bdtrackersnmh.exe -> 0.4469
+2026-03-01 22:09:11,518 - main - INFO - WebSocket disconnected. Total: 1
+2026-03-01 22:09:11,521 - main - ERROR - Error processing message: 
+2026-03-01 22:09:11,521 - main - ERROR - WebSocket error: WebSocket is not connected. Need to call "accept" first.
+2026-03-01 22:09:11,522 - main - INFO - WebSocket disconnected. Total: 0
+2026-03-01 22:09:12,345 - main - INFO - New WebSocket connection. Total: 1
+2026-03-01 22:09:38,087 - main - INFO - unknown -> 0.4496
+2026-03-01 22:09:38,141 - main - INFO - zoom.exe -> 0.4439
+2026-03-01 22:09:38,177 - main - INFO - lsaiso.exe -> 0.4496
+2026-03-01 22:09:38,221 - main - INFO - browserhost.exe -> 0.4457
+2026-03-01 22:09:38,269 - main - INFO - powershell.exe -> 0.4475
+2026-03-01 22:09:38,317 - main - INFO - chrome.exe -> 0.4440
+2026-03-01 22:09:38,360 - main - INFO - chrome.exe -> 0.4440
+2026-03-01 22:09:38,411 - main - INFO - code.exe -> 0.4857
+2026-03-01 22:09:38,458 - main - INFO - discord.exe -> 0.4440
+2026-03-01 22:09:38,503 - main - INFO - msedgewebview2.exe -> 0.4464
+2026-03-01 22:09:38,563 - main - INFO - loom.exe -> 0.4441
+2026-03-01 22:09:38,611 - main - INFO - bdservicehost.exe -> 0.4897
+2026-03-01 22:09:38,661 - main - INFO - bdservicehost.exe -> 0.4464
+2026-03-01 22:09:38,713 - main - INFO - bdtrackersnmh.exe -> 0.4469
+2026-03-01 22:09:42,114 - main - INFO - New WebSocket connection. Total: 2
+2026-03-01 22:10:06,279 - main - INFO - unknown -> 0.4496
+2026-03-01 22:10:06,321 - main - INFO - zoom.exe -> 0.4438
+2026-03-01 22:10:06,382 - main - INFO - lsaiso.exe -> 0.4496
+2026-03-01 22:10:06,436 - main - INFO - browserhost.exe -> 0.4463
+2026-03-01 22:10:06,484 - main - INFO - powershell.exe -> 0.4475
+2026-03-01 22:10:06,522 - main - INFO - chrome.exe -> 0.4440
+2026-03-01 22:10:06,565 - main - INFO - chrome.exe -> 0.4441
+2026-03-01 22:10:06,604 - main - INFO - code.exe -> 0.4857
+2026-03-01 22:10:06,648 - main - INFO - discord.exe -> 0.4440
+2026-03-01 22:10:06,691 - main - INFO - msedgewebview2.exe -> 0.4464
+2026-03-01 22:10:06,733 - main - INFO - loom.exe -> 0.4441
+2026-03-01 22:10:06,777 - main - INFO - bdservicehost.exe -> 0.4907
+2026-03-01 22:10:06,820 - main - INFO - bdservicehost.exe -> 0.4464
+2026-03-01 22:10:06,864 - main - INFO - bdtrackersnmh.exe -> 0.4469
+2026-03-01 22:10:34,563 - main - INFO - unknown -> 0.4496
+2026-03-01 22:10:34,601 - main - INFO - zoom.exe -> 0.4440
+2026-03-01 22:10:34,636 - main - INFO - lsaiso.exe -> 0.4496
+2026-03-01 22:10:34,675 - main - INFO - browserhost.exe -> 0.4461
+2026-03-01 22:10:34,711 - main - INFO - powershell.exe -> 0.4475
+2026-03-01 22:10:34,751 - main - INFO - chrome.exe -> 0.4440
+2026-03-01 22:10:34,786 - main - INFO - chrome.exe -> 0.4439
+2026-03-01 22:10:34,823 - main - INFO - code.exe -> 0.4857
+2026-03-01 22:10:34,864 - main - INFO - discord.exe -> 0.4440
+2026-03-01 22:10:34,898 - main - INFO - msedgewebview2.exe -> 0.4464
+2026-03-01 22:10:34,938 - main - INFO - loom.exe -> 0.4441
+2026-03-01 22:10:34,975 - main - INFO - bdservicehost.exe -> 0.4899
+2026-03-01 22:10:35,011 - main - INFO - bdservicehost.exe -> 0.4464
+2026-03-01 22:10:35,049 - main - INFO - bdtrackersnmh.exe -> 0.4469
+2026-03-01 22:10:35,065 - main - INFO - WebSocket disconnected. Total: 1
+2026-03-01 22:10:35,066 - main - INFO - WebSocket disconnected. Total: 1
+2026-03-01 22:10:35,068 - main - INFO - WebSocket disconnected. Total: 1
+2026-03-01 22:10:35,072 - main - INFO - New WebSocket connection. Total: 2
+2026-03-01 22:10:36,836 - main - ERROR - WebSocket error: 'brand_raw'
+2026-03-01 22:10:36,837 - main - INFO - WebSocket disconnected. Total: 1
+2026-03-01 22:10:36,853 - main - INFO - WebSocket disconnected. Total: 0
+2026-03-01 22:10:36,954 - main - INFO - Shutting down EdgeGuard AI Server...
+2026-03-01 22:10:36,957 - main - INFO - System monitoring stopped
+2026-03-01 22:10:37,166 - models.detector - INFO - Model saved to data/models/isolation_forest.pkl
+2026-03-01 22:10:37,167 - main - INFO - EdgeGuard AI Server stopped
+2026-03-01 22:17:26,749 - models.detector - INFO - Model loaded from data/models/isolation_forest.pkl
+2026-03-01 22:17:31,242 - models.detector - INFO - OpenVINO Execution Provider enabled for AMD
+2026-03-01 22:18:14,018 - models.detector - INFO - ONNX model loaded successfully
+2026-03-01 22:18:21,567 - amd_optimized.onnx_inference - INFO - OpenVINO Execution Provider enabled
+2026-03-01 22:18:23,427 - amd_optimized.onnx_inference - INFO - ONNX Runtime providers: ['CPUExecutionProvider']
+2026-03-01 22:18:23,428 - amd_optimized.onnx_inference - INFO - AMD ONNX Inference initialized
+2026-03-01 22:18:23,428 - amd_optimized.onnx_inference - INFO -   CPU: AMD Ryzen 5 5600H with Radeon Graphics
+2026-03-01 22:18:23,429 - amd_optimized.onnx_inference - INFO -   Threads: 12
+2026-03-01 22:18:23,429 - amd_optimized.onnx_inference - INFO -   AMD Optimized: True
+2026-03-01 22:18:23,431 - amd_optimized.onnx_inference - INFO - Set CPU affinity to first 6 physical cores
+2026-03-01 22:18:23,432 - amd_optimized.onnx_inference - INFO - AMD optimizations applied successfully
+2026-03-01 22:18:23,433 - main - INFO - ONNX model loaded with AMD optimizations
+2026-03-01 22:18:23,603 - main - INFO - ==================================================
+2026-03-01 22:18:23,604 - main - INFO - Starting EdgeGuard AI Server
+2026-03-01 22:18:23,605 - main - INFO - ==================================================
+2026-03-01 22:18:27,276 - main - INFO - CPU: AMD Ryzen 5 5600H with Radeon Graphics
+2026-03-01 22:18:27,276 - main - INFO - Cores: 12 logical, 6 physical
+2026-03-01 22:18:27,277 - main - INFO - AMD Optimized: True
+2026-03-01 22:18:27,278 - main - INFO - AVX-512: False
+2026-03-01 22:18:27,278 - main - INFO - Model trained: True
+2026-03-01 22:18:27,279 - main - INFO - ONNX loaded: True
+2026-03-01 22:18:27,280 - monitor.file_monitor - INFO - Watching path: C:\Users\e2sri/Desktop
+2026-03-01 22:18:27,293 - main - INFO - System monitoring started
+2026-03-01 22:18:27,294 - main - INFO - EdgeGuard AI Server started successfully
+2026-03-01 22:18:27,295 - main - INFO - API Documentation: http://localhost:8000/api/docs
+2026-03-01 22:18:27,296 - main - INFO - WebSocket: ws://localhost:8000/ws
+2026-03-01 22:18:27,296 - main - INFO - Starting monitoring loop...
+2026-03-01 22:18:47,020 - main - INFO - unknown -> 0.4496
+2026-03-01 22:18:47,066 - main - INFO - searchprotocolhost.exe -> 0.4468
+2026-03-01 22:18:47,103 - main - INFO - zoom.exe -> 0.4441
+2026-03-01 22:18:47,137 - main - INFO - lsaiso.exe -> 0.4496
+2026-03-01 22:18:47,178 - main - INFO - browserhost.exe -> 0.4458
+2026-03-01 22:18:47,220 - main - INFO - powershell.exe -> 0.4457
+2026-03-01 22:18:47,261 - main - INFO - chrome.exe -> 0.4440
+2026-03-01 22:18:47,297 - main - INFO - code.exe -> 0.4857
+2026-03-01 22:18:47,334 - main - INFO - discord.exe -> 0.4459
+2026-03-01 22:18:47,375 - main - INFO - msedgewebview2.exe -> 0.4462
+2026-03-01 22:18:47,411 - main - INFO - loom.exe -> 0.4441
+2026-03-01 22:18:47,450 - main - INFO - bdservicehost.exe -> 0.4858
+2026-03-01 22:18:47,493 - main - INFO - bdservicehost.exe -> 0.4464
+2026-03-01 22:18:47,539 - main - INFO - bdtrackersnmh.exe -> 0.4469
+2026-03-01 22:18:47,657 - main - INFO - Shutting down EdgeGuard AI Server...
+2026-03-01 22:18:47,660 - main - INFO - System monitoring stopped
+2026-03-01 22:18:47,855 - models.detector - INFO - Model saved to data/models/isolation_forest.pkl
+2026-03-01 22:18:47,856 - main - INFO - EdgeGuard AI Server stopped
+2026-03-01 22:19:07,214 - models.detector - INFO - Model loaded from data/models/isolation_forest.pkl
+2026-03-01 22:19:10,735 - models.detector - INFO - OpenVINO Execution Provider enabled for AMD
+2026-03-01 22:19:48,238 - models.detector - INFO - ONNX model loaded successfully
+2026-03-01 22:19:55,341 - amd_optimized.onnx_inference - INFO - OpenVINO Execution Provider enabled
+2026-03-01 22:19:56,995 - amd_optimized.onnx_inference - INFO - ONNX Runtime providers: ['CPUExecutionProvider']
+2026-03-01 22:19:56,996 - amd_optimized.onnx_inference - INFO - AMD ONNX Inference initialized
+2026-03-01 22:19:56,996 - amd_optimized.onnx_inference - INFO -   CPU: AMD Ryzen 5 5600H with Radeon Graphics
+2026-03-01 22:19:56,996 - amd_optimized.onnx_inference - INFO -   Threads: 12
+2026-03-01 22:19:56,997 - amd_optimized.onnx_inference - INFO -   AMD Optimized: True
+2026-03-01 22:19:56,998 - amd_optimized.onnx_inference - INFO - Set CPU affinity to first 6 physical cores
+2026-03-01 22:19:56,999 - amd_optimized.onnx_inference - INFO - AMD optimizations applied successfully
+2026-03-01 22:19:57,000 - main - INFO - ONNX model loaded with AMD optimizations
+2026-03-01 22:19:57,156 - main - INFO - ==================================================
+2026-03-01 22:19:57,157 - main - INFO - Starting EdgeGuard AI Server
+2026-03-01 22:19:57,157 - main - INFO - ==================================================
+2026-03-01 22:20:00,747 - main - INFO - CPU: AMD Ryzen 5 5600H with Radeon Graphics
+2026-03-01 22:20:00,748 - main - INFO - Cores: 12 logical, 6 physical
+2026-03-01 22:20:00,749 - main - INFO - AMD Optimized: True
+2026-03-01 22:20:00,749 - main - INFO - AVX-512: False
+2026-03-01 22:20:00,750 - main - INFO - Model trained: True
+2026-03-01 22:20:00,750 - main - INFO - ONNX loaded: True
+2026-03-01 22:20:00,752 - monitor.file_monitor - INFO - Watching path: C:\Users\e2sri/Desktop
+2026-03-01 22:20:00,755 - main - INFO - System monitoring started
+2026-03-01 22:20:00,756 - main - INFO - EdgeGuard AI Server started successfully
+2026-03-01 22:20:00,756 - main - INFO - API Documentation: http://localhost:8000/api/docs
+2026-03-01 22:20:00,757 - main - INFO - WebSocket: ws://localhost:8000/ws
+2026-03-01 22:20:00,767 - main - INFO - Starting monitoring loop...
+2026-03-01 22:20:19,297 - main - INFO - unknown -> 0.4496
+2026-03-01 22:20:19,336 - main - INFO - zoom.exe -> 0.4441
+2026-03-01 22:20:19,376 - main - INFO - lsaiso.exe -> 0.4496
+2026-03-01 22:20:19,422 - main - INFO - browserhost.exe -> 0.4458
+2026-03-01 22:20:19,464 - main - INFO - powershell.exe -> 0.4459
+2026-03-01 22:20:19,504 - main - INFO - chrome.exe -> 0.4440
+2026-03-01 22:20:19,545 - main - INFO - code.exe -> 0.4857
+2026-03-01 22:20:19,582 - main - INFO - discord.exe -> 0.4441
+2026-03-01 22:20:19,630 - main - INFO - msedgewebview2.exe -> 0.4462
+2026-03-01 22:20:19,670 - main - INFO - loom.exe -> 0.4441
+2026-03-01 22:20:19,711 - main - INFO - bdservicehost.exe -> 0.4858
+2026-03-01 22:20:19,751 - main - INFO - bdservicehost.exe -> 0.4464
+2026-03-01 22:20:19,788 - main - INFO - bdtrackersnmh.exe -> 0.4469
+2026-03-01 22:20:19,835 - main - INFO - chrome.exe -> 0.4455
+2026-03-01 22:20:19,875 - main - INFO - New WebSocket connection. Total: 1
+2026-03-01 22:20:40,184 - main - INFO - unknown -> 0.4496
+2026-03-01 22:20:40,231 - main - INFO - zoom.exe -> 0.4447
+2026-03-01 22:20:40,280 - main - INFO - lsaiso.exe -> 0.4496
+2026-03-01 22:20:40,318 - main - INFO - browserhost.exe -> 0.4458
+2026-03-01 22:20:40,354 - main - INFO - powershell.exe -> 0.4459
+2026-03-01 22:20:40,400 - main - INFO - chrome.exe -> 0.4441
+2026-03-01 22:20:40,438 - main - INFO - code.exe -> 0.4857
+2026-03-01 22:20:40,484 - main - INFO - discord.exe -> 0.4441
+2026-03-01 22:20:40,519 - main - INFO - msedgewebview2.exe -> 0.4462
+2026-03-01 22:20:40,556 - main - INFO - loom.exe -> 0.4441
+2026-03-01 22:20:40,590 - main - INFO - bdservicehost.exe -> 0.4882
+2026-03-01 22:20:40,635 - main - INFO - bdservicehost.exe -> 0.4464
+2026-03-01 22:20:40,682 - main - INFO - bdtrackersnmh.exe -> 0.4469
+2026-03-01 22:20:40,719 - main - INFO - chrome.exe -> 0.4456
+2026-03-01 22:21:00,164 - main - INFO - unknown -> 0.4496
+2026-03-01 22:21:00,216 - main - INFO - zoom.exe -> 0.4439
+2026-03-01 22:21:00,264 - main - INFO - lsaiso.exe -> 0.4496
+2026-03-01 22:21:00,317 - main - INFO - browserhost.exe -> 0.4458
+2026-03-01 22:21:00,373 - main - INFO - powershell.exe -> 0.4459
+2026-03-01 22:21:00,421 - main - INFO - chrome.exe -> 0.4439
+2026-03-01 22:21:00,473 - main - INFO - code.exe -> 0.4853
+2026-03-01 22:21:00,529 - main - INFO - discord.exe -> 0.4441
+2026-03-01 22:21:00,580 - main - INFO - msedgewebview2.exe -> 0.4462
+2026-03-01 22:21:00,634 - main - INFO - loom.exe -> 0.4441
+2026-03-01 22:21:00,688 - main - INFO - bdservicehost.exe -> 0.4863
+2026-03-01 22:21:00,740 - main - INFO - bdservicehost.exe -> 0.4464
+2026-03-01 22:21:00,798 - main - INFO - bdtrackersnmh.exe -> 0.4469
+2026-03-01 22:21:00,841 - main - INFO - chrome.exe -> 0.4453
+2026-03-01 22:21:01,978 - main - INFO - New WebSocket connection. Total: 2
+2026-03-01 22:21:24,363 - main - INFO - unknown -> 0.4496
+2026-03-01 22:21:24,408 - main - INFO - zoom.exe -> 0.4440
+2026-03-01 22:21:24,454 - main - INFO - lsaiso.exe -> 0.4496
+2026-03-01 22:21:24,510 - main - INFO - browserhost.exe -> 0.4458
+2026-03-01 22:21:24,568 - main - INFO - powershell.exe -> 0.4459
+2026-03-01 22:21:24,614 - main - INFO - chrome.exe -> 0.4440
+2026-03-01 22:21:24,666 - main - INFO - code.exe -> 0.4857
+2026-03-01 22:21:24,718 - main - INFO - discord.exe -> 0.4441
+2026-03-01 22:21:24,763 - main - INFO - msedgewebview2.exe -> 0.4462
+2026-03-01 22:21:24,817 - main - INFO - loom.exe -> 0.4441
+2026-03-01 22:21:24,870 - main - INFO - bdservicehost.exe -> 0.4875
+2026-03-01 22:21:24,921 - main - INFO - bdservicehost.exe -> 0.4464
+2026-03-01 22:21:24,970 - main - INFO - bdtrackersnmh.exe -> 0.4469
+2026-03-01 22:21:25,035 - main - INFO - chrome.exe -> 0.4455
+2026-03-01 22:21:47,573 - main - INFO - unknown -> 0.4496
+2026-03-01 22:21:47,622 - main - INFO - zoom.exe -> 0.4443
+2026-03-01 22:21:47,679 - main - INFO - lsaiso.exe -> 0.4496
+2026-03-01 22:21:47,732 - main - INFO - browserhost.exe -> 0.4458
+2026-03-01 22:21:47,786 - main - INFO - powershell.exe -> 0.4459
+2026-03-01 22:21:47,837 - main - INFO - chrome.exe -> 0.4440
+2026-03-01 22:21:47,893 - main - INFO - code.exe -> 0.4857
+2026-03-01 22:21:47,943 - main - INFO - discord.exe -> 0.4441
+2026-03-01 22:21:47,991 - main - INFO - msedgewebview2.exe -> 0.4462
+2026-03-01 22:21:48,042 - main - INFO - loom.exe -> 0.4441
+2026-03-01 22:21:48,094 - main - INFO - bdservicehost.exe -> 0.4868
+2026-03-01 22:21:48,139 - main - INFO - bdservicehost.exe -> 0.4464
+2026-03-01 22:21:48,189 - main - INFO - bdtrackersnmh.exe -> 0.4469
+2026-03-01 22:21:48,241 - main - INFO - chrome.exe -> 0.4455
+2026-03-01 22:22:09,576 - main - INFO - unknown -> 0.4496
+2026-03-01 22:22:09,635 - main - INFO - zoom.exe -> 0.4439
+2026-03-01 22:22:09,697 - main - INFO - lsaiso.exe -> 0.4496
+2026-03-01 22:22:09,755 - main - INFO - browserhost.exe -> 0.4458
+2026-03-01 22:22:09,815 - main - INFO - powershell.exe -> 0.4459
+2026-03-01 22:22:09,885 - main - INFO - chrome.exe -> 0.4440
+2026-03-01 22:22:09,950 - main - INFO - code.exe -> 0.4857
+2026-03-01 22:22:09,997 - main - INFO - discord.exe -> 0.4441
+2026-03-01 22:22:10,053 - main - INFO - msedgewebview2.exe -> 0.4462
+2026-03-01 22:22:10,119 - main - INFO - loom.exe -> 0.4441
+2026-03-01 22:22:10,180 - main - INFO - bdservicehost.exe -> 0.4869
+2026-03-01 22:22:10,241 - main - INFO - bdservicehost.exe -> 0.4464
+2026-03-01 22:22:10,299 - main - INFO - bdtrackersnmh.exe -> 0.4469
+2026-03-01 22:22:10,358 - main - INFO - chrome.exe -> 0.4456
+2026-03-01 22:22:32,468 - main - INFO - unknown -> 0.4496
+2026-03-01 22:22:32,521 - main - INFO - zoom.exe -> 0.4439
+2026-03-01 22:22:32,571 - main - INFO - lsaiso.exe -> 0.4496
+2026-03-01 22:22:32,622 - main - INFO - browserhost.exe -> 0.4458
+2026-03-01 22:22:32,682 - main - INFO - powershell.exe -> 0.4459
+2026-03-01 22:22:32,738 - main - INFO - chrome.exe -> 0.4440
+2026-03-01 22:22:32,792 - main - INFO - code.exe -> 0.4857
+2026-03-01 22:22:32,844 - main - INFO - discord.exe -> 0.4441
+2026-03-01 22:22:32,898 - main - INFO - msedgewebview2.exe -> 0.4462
+2026-03-01 22:22:32,953 - main - INFO - loom.exe -> 0.4442
+2026-03-01 22:22:33,023 - main - INFO - bdservicehost.exe -> 0.4866
+2026-03-01 22:22:33,080 - main - INFO - bdservicehost.exe -> 0.4464
+2026-03-01 22:22:33,133 - main - INFO - bdtrackersnmh.exe -> 0.4469
+2026-03-01 22:22:33,203 - main - INFO - chrome.exe -> 0.4454
+2026-03-01 22:22:53,544 - main - INFO - unknown -> 0.4496
+2026-03-01 22:22:53,585 - main - INFO - zoom.exe -> 0.4439
+2026-03-01 22:22:53,626 - main - INFO - lsaiso.exe -> 0.4496
+2026-03-01 22:22:53,666 - main - INFO - browserhost.exe -> 0.4458
+2026-03-01 22:22:53,707 - main - INFO - powershell.exe -> 0.4459
+2026-03-01 22:22:53,749 - main - INFO - chrome.exe -> 0.4440
+2026-03-01 22:22:53,788 - main - INFO - code.exe -> 0.4857
+2026-03-01 22:22:53,830 - main - INFO - discord.exe -> 0.4442
+2026-03-01 22:22:53,868 - main - INFO - msedgewebview2.exe -> 0.4462
+2026-03-01 22:22:53,907 - main - INFO - loom.exe -> 0.4442
+2026-03-01 22:22:53,968 - main - INFO - bdservicehost.exe -> 0.4869
+2026-03-01 22:22:54,026 - main - INFO - bdservicehost.exe -> 0.4464
+2026-03-01 22:22:54,063 - main - INFO - bdtrackersnmh.exe -> 0.4469
+2026-03-01 22:22:54,098 - main - INFO - chrome.exe -> 0.4455
+2026-03-01 22:22:54,107 - main - INFO - WebSocket disconnected. Total: 1
+2026-03-01 22:22:54,109 - main - INFO - WebSocket disconnected. Total: 0
+2026-03-01 22:22:54,207 - main - INFO - Shutting down EdgeGuard AI Server...
+2026-03-01 22:22:54,210 - main - INFO - System monitoring stopped
+2026-03-01 22:22:54,403 - models.detector - INFO - Model saved to data/models/isolation_forest.pkl
+2026-03-01 22:22:54,404 - main - INFO - EdgeGuard AI Server stopped
+2026-03-01 22:35:45,017 - models.detector - INFO - Model loaded from data/models/isolation_forest.pkl
+2026-03-01 22:35:48,283 - models.detector - INFO - OpenVINO Execution Provider enabled for AMD
+2026-03-01 22:36:18,846 - models.detector - INFO - ONNX model loaded successfully
+2026-03-01 22:36:24,608 - amd_optimized.onnx_inference - INFO - OpenVINO Execution Provider enabled
+2026-03-01 22:36:25,888 - amd_optimized.onnx_inference - INFO - ONNX Runtime providers: ['CPUExecutionProvider']
+2026-03-01 22:36:25,889 - amd_optimized.onnx_inference - INFO - AMD ONNX Inference initialized
+2026-03-01 22:36:25,889 - amd_optimized.onnx_inference - INFO -   CPU: AMD Ryzen 5 5600H with Radeon Graphics
+2026-03-01 22:36:25,890 - amd_optimized.onnx_inference - INFO -   Threads: 12
+2026-03-01 22:36:25,890 - amd_optimized.onnx_inference - INFO -   AMD Optimized: True
+2026-03-01 22:36:25,891 - amd_optimized.onnx_inference - INFO - Set CPU affinity to first 6 physical cores
+2026-03-01 22:36:25,892 - amd_optimized.onnx_inference - INFO - AMD optimizations applied successfully
+2026-03-01 22:36:25,892 - main - INFO - ONNX model loaded with AMD optimizations
+2026-03-01 22:36:26,006 - main - INFO - ==================================================
+2026-03-01 22:36:26,007 - main - INFO - Starting EdgeGuard AI Server
+2026-03-01 22:36:26,018 - main - INFO - ==================================================
+2026-03-01 22:36:28,922 - main - INFO - CPU: AMD Ryzen 5 5600H with Radeon Graphics
+2026-03-01 22:36:28,923 - main - INFO - Cores: 12 logical, 6 physical
+2026-03-01 22:36:28,924 - main - INFO - AMD Optimized: True
+2026-03-01 22:36:28,924 - main - INFO - AVX-512: False
+2026-03-01 22:36:28,925 - main - INFO - Model trained: True
+2026-03-01 22:36:28,925 - main - INFO - ONNX loaded: True
+2026-03-01 22:36:28,926 - monitor.file_monitor - INFO - Watching path: C:\Users\e2sri/Desktop
+2026-03-01 22:36:28,928 - main - INFO - System monitoring started
+2026-03-01 22:36:28,928 - main - INFO - EdgeGuard AI Server started successfully
+2026-03-01 22:36:28,929 - main - INFO - API Documentation: http://localhost:8000/api/docs
+2026-03-01 22:36:28,929 - main - INFO - WebSocket: ws://localhost:8000/ws
+2026-03-01 22:36:28,930 - main - INFO - Starting monitoring loop...
+2026-03-01 22:36:43,701 - main - INFO - unknown -> 0.4496
+2026-03-01 22:36:43,731 - main - INFO - zoom.exe -> 0.4441
+2026-03-01 22:36:43,761 - main - INFO - lsaiso.exe -> 0.4496
+2026-03-01 22:36:43,788 - main - INFO - browserhost.exe -> 0.4458
+2026-03-01 22:36:43,820 - main - INFO - powershell.exe -> 0.4458
+2026-03-01 22:36:43,848 - main - INFO - chrome.exe -> 0.4440
+2026-03-01 22:36:43,875 - main - INFO - code.exe -> 0.4853
+2026-03-01 22:36:43,907 - main - INFO - discord.exe -> 0.4441
+2026-03-01 22:36:43,935 - main - INFO - msedgewebview2.exe -> 0.4462
+2026-03-01 22:36:43,965 - main - INFO - loom.exe -> 0.4441
+2026-03-01 22:36:43,993 - main - INFO - bdservicehost.exe -> 0.4847
+2026-03-01 22:36:44,027 - main - INFO - bdservicehost.exe -> 0.4464
+2026-03-01 22:36:44,058 - main - INFO - bdtrackersnmh.exe -> 0.4469
+2026-03-01 22:36:44,092 - main - INFO - chrome.exe -> 0.4450
+2026-03-01 22:37:01,471 - main - INFO - unknown -> 0.4496
+2026-03-01 22:37:01,506 - main - INFO - zoom.exe -> 0.4447
+2026-03-01 22:37:01,537 - main - INFO - lsaiso.exe -> 0.4496
+2026-03-01 22:37:01,572 - main - INFO - browserhost.exe -> 0.4458
+2026-03-01 22:37:01,604 - main - INFO - powershell.exe -> 0.4458
+2026-03-01 22:37:01,635 - main - INFO - chrome.exe -> 0.4440
+2026-03-01 22:37:01,666 - main - INFO - code.exe -> 0.4853
+2026-03-01 22:37:01,698 - main - INFO - discord.exe -> 0.4441
+2026-03-01 22:37:01,731 - main - INFO - msedgewebview2.exe -> 0.4462
+2026-03-01 22:37:01,763 - main - INFO - loom.exe -> 0.4441
+2026-03-01 22:37:01,793 - main - INFO - bdservicehost.exe -> 0.4856
+2026-03-01 22:37:01,823 - main - INFO - bdservicehost.exe -> 0.4464
+2026-03-01 22:37:01,862 - main - INFO - bdtrackersnmh.exe -> 0.4469
+2026-03-01 22:37:01,893 - main - INFO - chrome.exe -> 0.4451
+2026-03-01 22:37:02,032 - main - INFO - New WebSocket connection. Total: 1
+2026-03-01 22:37:20,161 - main - INFO - unknown -> 0.4496
+2026-03-01 22:37:20,202 - main - INFO - zoom.exe -> 0.4439
+2026-03-01 22:37:20,234 - main - INFO - lsaiso.exe -> 0.4496
+2026-03-01 22:37:20,268 - main - INFO - browserhost.exe -> 0.4458
+2026-03-01 22:37:20,304 - main - INFO - powershell.exe -> 0.4473
+2026-03-01 22:37:20,336 - main - INFO - chrome.exe -> 0.4440
+2026-03-01 22:37:20,372 - main - INFO - code.exe -> 0.4853
+2026-03-01 22:37:20,404 - main - INFO - discord.exe -> 0.4441
+2026-03-01 22:37:20,436 - main - INFO - msedgewebview2.exe -> 0.4462
+2026-03-01 22:37:20,472 - main - INFO - loom.exe -> 0.4441
+2026-03-01 22:37:20,503 - main - INFO - bdservicehost.exe -> 0.4866
+2026-03-01 22:37:20,533 - main - INFO - bdservicehost.exe -> 0.4464
+2026-03-01 22:37:20,565 - main - INFO - bdtrackersnmh.exe -> 0.4469
+2026-03-01 22:37:20,598 - main - INFO - chrome.exe -> 0.4450
+2026-03-01 22:37:21,466 - main - INFO - New WebSocket connection. Total: 2
+2026-03-01 22:37:38,916 - main - INFO - unknown -> 0.4496
+2026-03-01 22:37:38,947 - main - INFO - zoom.exe -> 0.4441
+2026-03-01 22:37:38,979 - main - INFO - lsaiso.exe -> 0.4496
+2026-03-01 22:37:39,014 - main - INFO - browserhost.exe -> 0.4458
+2026-03-01 22:37:39,054 - main - INFO - powershell.exe -> 0.4473
+2026-03-01 22:37:39,088 - main - INFO - chrome.exe -> 0.4440
+2026-03-01 22:37:39,121 - main - INFO - code.exe -> 0.4853
+2026-03-01 22:37:39,151 - main - INFO - discord.exe -> 0.4441
+2026-03-01 22:37:39,187 - main - INFO - msedgewebview2.exe -> 0.4462
+2026-03-01 22:37:39,218 - main - INFO - loom.exe -> 0.4441
+2026-03-01 22:37:39,248 - main - INFO - bdservicehost.exe -> 0.4869
+2026-03-01 22:37:39,278 - main - INFO - bdservicehost.exe -> 0.4464
+2026-03-01 22:37:39,311 - main - INFO - bdtrackersnmh.exe -> 0.4469
+2026-03-01 22:37:39,343 - main - INFO - chrome.exe -> 0.4449
+2026-03-01 22:37:56,506 - main - INFO - unknown -> 0.4496
+2026-03-01 22:37:56,538 - main - INFO - zoom.exe -> 0.4442
+2026-03-01 22:37:56,567 - main - INFO - lsaiso.exe -> 0.4496
+2026-03-01 22:37:56,598 - main - INFO - browserhost.exe -> 0.4458
+2026-03-01 22:37:56,631 - main - INFO - powershell.exe -> 0.4464
+2026-03-01 22:37:56,663 - main - INFO - chrome.exe -> 0.4440
+2026-03-01 22:37:56,700 - main - INFO - code.exe -> 0.4853
+2026-03-01 22:37:56,733 - main - INFO - discord.exe -> 0.4442
+2026-03-01 22:37:56,764 - main - INFO - msedgewebview2.exe -> 0.4462
+2026-03-01 22:37:56,796 - main - INFO - loom.exe -> 0.4441
+2026-03-01 22:37:56,827 - main - INFO - bdservicehost.exe -> 0.4845
+2026-03-01 22:37:56,855 - main - INFO - bdservicehost.exe -> 0.4464
+2026-03-01 22:37:56,888 - main - INFO - bdtrackersnmh.exe -> 0.4469
+2026-03-01 22:37:56,919 - main - INFO - chrome.exe -> 0.4451
+2026-03-01 22:38:13,293 - main - INFO - unknown -> 0.4496
+2026-03-01 22:38:13,321 - main - INFO - zoom.exe -> 0.4445
+2026-03-01 22:38:13,352 - main - INFO - lsaiso.exe -> 0.4496
+2026-03-01 22:38:13,383 - main - INFO - browserhost.exe -> 0.4458
+2026-03-01 22:38:13,414 - main - INFO - powershell.exe -> 0.4458
+2026-03-01 22:38:13,449 - main - INFO - chrome.exe -> 0.4441
+2026-03-01 22:38:13,477 - main - INFO - code.exe -> 0.4853
+2026-03-01 22:38:13,515 - main - INFO - discord.exe -> 0.4440
+2026-03-01 22:38:13,543 - main - INFO - msedgewebview2.exe -> 0.4462
+2026-03-01 22:38:13,573 - main - INFO - loom.exe -> 0.4441
+2026-03-01 22:38:13,603 - main - INFO - bdservicehost.exe -> 0.4842
+2026-03-01 22:38:13,633 - main - INFO - bdservicehost.exe -> 0.4464
+2026-03-01 22:38:13,666 - main - INFO - bdtrackersnmh.exe -> 0.4469
+2026-03-01 22:38:13,697 - main - INFO - chrome.exe -> 0.4450
+2026-03-01 22:38:30,045 - main - INFO - unknown -> 0.4496
+2026-03-01 22:38:30,076 - main - INFO - zoom.exe -> 0.4444
+2026-03-01 22:38:30,105 - main - INFO - lsaiso.exe -> 0.4496
+2026-03-01 22:38:30,139 - main - INFO - browserhost.exe -> 0.4458
+2026-03-01 22:38:30,179 - main - INFO - powershell.exe -> 0.4456
+2026-03-01 22:38:30,212 - main - INFO - chrome.exe -> 0.4440
+2026-03-01 22:38:30,243 - main - INFO - code.exe -> 0.4853
+2026-03-01 22:38:30,274 - main - INFO - discord.exe -> 0.4441
+2026-03-01 22:38:30,306 - main - INFO - msedgewebview2.exe -> 0.4462
+2026-03-01 22:38:30,337 - main - INFO - loom.exe -> 0.4441
+2026-03-01 22:38:30,367 - main - INFO - bdservicehost.exe -> 0.4832
+2026-03-01 22:38:30,397 - main - INFO - bdservicehost.exe -> 0.4464
+2026-03-01 22:38:30,426 - main - INFO - bdtrackersnmh.exe -> 0.4469
+2026-03-01 22:38:30,462 - main - INFO - chrome.exe -> 0.4449
+2026-03-01 22:38:47,125 - main - INFO - unknown -> 0.4496
+2026-03-01 22:38:47,152 - main - INFO - zoom.exe -> 0.4439
+2026-03-01 22:38:47,184 - main - INFO - lsaiso.exe -> 0.4496
+2026-03-01 22:38:47,217 - main - INFO - browserhost.exe -> 0.4458
+2026-03-01 22:38:47,247 - main - INFO - powershell.exe -> 0.4456
+2026-03-01 22:38:47,278 - main - INFO - chrome.exe -> 0.4440
+2026-03-01 22:38:47,308 - main - INFO - code.exe -> 0.4853
+2026-03-01 22:38:47,337 - main - INFO - discord.exe -> 0.4441
+2026-03-01 22:38:47,368 - main - INFO - msedgewebview2.exe -> 0.4462
+2026-03-01 22:38:47,401 - main - INFO - loom.exe -> 0.4441
+2026-03-01 22:38:47,435 - main - INFO - bdservicehost.exe -> 0.4833
+2026-03-01 22:38:47,466 - main - INFO - bdservicehost.exe -> 0.4464
+2026-03-01 22:38:47,497 - main - INFO - bdtrackersnmh.exe -> 0.4469
+2026-03-01 22:38:47,530 - main - INFO - chrome.exe -> 0.4449
+2026-03-01 22:38:47,536 - main - INFO - WebSocket disconnected. Total: 1
+2026-03-01 22:38:47,537 - main - INFO - WebSocket disconnected. Total: 0
+2026-03-01 22:38:47,641 - main - INFO - Shutting down EdgeGuard AI Server...
+2026-03-01 22:38:47,643 - main - INFO - System monitoring stopped
+2026-03-01 22:38:47,808 - models.detector - INFO - Model saved to data/models/isolation_forest.pkl
+2026-03-01 22:38:47,809 - main - INFO - EdgeGuard AI Server stopped
