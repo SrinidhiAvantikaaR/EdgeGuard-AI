@@ -95,7 +95,6 @@ Optional:
 We use:
 
 * Synthetic ransomware-like behavior generation
-* Public intrusion datasets (e.g., CICIDS2017, UNSW-NB15)
 * Custom feature extraction pipeline
 
 ---
